@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouthForce — Контакти</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Контакти</h1>
+
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form card" novalidate>
+          <label>Ім'я
+            <input name="name" type="text" placeholder="Ваше ім'я" required>
+          </label>
+
+          <label>Email
+            <input name="email" type="email" placeholder="email@domain.com" required>
+          </label>
+
+          <label>Тема
+            <select name="topic">
+              <option value="question">Питання</option>
+              <option value="collab">Співпраця</option>
+              <option value="volunteer">Волонтерство</option>
+            </select>
+          </label>
+
+          <label>Повідомлення
+            <textarea name="message" rows="6" placeholder="Ваше повідомлення" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Відправити</button>
+            <button class="btn ghost" type="reset">Скинути</button>
+          </div>
+
+          <p id="formResult" class="muted" aria-live="polite" style="margin-top:10px"></p>
+        </form>
+
+        <aside class="card">
+          <h3>Контактна інформація</h3>
+          <p class="muted">Адреса: вул. Прикладна, 1, Кам'янець-Подільський</p>
+          <p class="muted">Email: info@youthforce.example</p>
+          <p class="muted">Телефон: +380 00 000 0000</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
