@@ -1,5 +1,5 @@
 /* =========================================
-   1. ШРИФТИ ТА ЗМІННІ
+   1. НАЛАШТУВАННЯ (SETUP)
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;700;800&display=swap');
 
@@ -13,9 +13,10 @@
   /* Градієнт */
   --gradient-blue: linear-gradient(90deg, #4b6cff, #2f81f7);
 
-  /* Картки */
+  /* Картки та Панелі */
   --card-bg: #0b0c0e;
   --card-border: rgba(255, 255, 255, 0.1);
+  --panel: rgba(255, 255, 255, 0.03);
 
   /* --- Розміри --- */
   --container-width: 1200px;
@@ -23,7 +24,7 @@
 }
 
 /* =========================================
-   2. СКИДАННЯ ТА БАЗОВІ СТИЛІ
+   2. СКИДАННЯ ТА БАЗА (RESET & BASE)
    ========================================= */
 * {
   box-sizing: border-box;
@@ -36,7 +37,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-white);
   line-height: 1.5;
-  overflow-x: hidden; /* Забираємо горизонтальний скрол */
+  overflow-x: hidden;
 }
 
 a {
@@ -54,166 +55,16 @@ img {
   display: block;
 }
 
-/* =========================================
-   3. HEADER (Шапка)
-   ========================================= */
-header {
-  width: 100%;
-  height: var(--header-height);
-  position: absolute; /* Хедер лежить ПОВЕРХ фону */
-  top: 0;
-  left: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.frame-129 {
-  width: 100%;
-  max-width: var(--container-width);
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between; /* Лого зліва, меню справа */
-  align-items: center;
-}
-
-/* Логотип */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-}
-
-.logo img {
-    width: 40px;  
-    height: 40px;
-    object-fit: contain;
-}
-
-.logo-text a {
-    font-family: 'Manrope', sans-serif;
-    font-weight: 700;
-    font-size: 18px; 
-    color: var(--text-white);
-    letter-spacing: -0.02em;
-}
-
-/* Навігація (Меню) */
-.head-center {
-    /* Робимо рамочку */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Тонка сіра лінія */
-    background: rgba(255, 255, 255, 0.03);     /* Ледь помітний фон */
-    border-radius: 100px;                      /* Повне заокруглення (капсула) */
-    padding: 10px 32px;                        /* Відступи всередині рамки */
-    
-    /* Ефект розмиття фону під меню (скло) */
-    backdrop-filter: blur(10px); 
-}
-
-.head-center ul {
-    display: flex;
-    gap: 32px; /* Відстань між словами всередині рамки */
-    margin: 0;
-    padding: 0;
-}
-
-.head-center a {
-    font-size: 14px; /* Трохи менший шрифт, як в інтерфейсах */
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6); /* Сірий колір */
-    transition: 0.3s;
-}
-
-.head-center a:hover,
-.head-center a.active {
-    color: var(--text-white); /* Білий при наведенні */
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
-}
-
-/* =========================================
-   4. HERO SECTION (Головний екран)
-   ========================================= */
-.hero {
-  background: linear-gradient(
-    302.51deg, 
-    rgba(0, 0, 0, 0.5) 4.3%, 
-    rgba(56, 83, 222, 0.5) 25.56%, 
-    rgba(0, 0, 0, 0.5) 50.18%, 
-    rgba(56, 83, 222, 0.5) 78.49%, 
-    rgba(0, 0, 0, 0.5) 101.22%, 
-    rgba(56, 83, 222, 0.5) 117.8%
-  );
-  
-  width: 100%;
-  min-height: 100vh; /* Займає 100% висоти екрану */
-  
-  /* Центрування вмісту */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  padding-top: var(--header-height); /* Щоб текст не наїжджав на хедер */
-  position: relative;
-}
-
-.frame-132 {
-  width: 100%;
-  max-width: var(--container-width);
-  padding: 0 20px;
-}
-
-.hero1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Текст зліва, фото справа */
-  gap: 50px;
-}
-
-/* Ліва частина (Текст) */
-.hero1 .text {
-  flex: 1; /* Займає доступне місце */
-  max-width: 600px;
-}
-
-.hero-title {
-  font-family: 'Manrope', sans-serif;
-  font-size: 56px;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  color: var(--text-white);
-}
-
-.hero-text {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--text-gray);
-  margin-bottom: 32px;
-}
-
-/* Права частина (Картинка) */
-.photo1 {
-  flex: 1;
-  max-width: 500px; /* Обмеження ширини */
-  height: auto;
-  object-fit: contain;
-  /* Легке світіння картинки */
-  filter: drop-shadow(0 0 40px rgba(56, 83, 222, 0.2));
-}
-
-/* =========================================
-   5. ЗАГАЛЬНІ СЕКЦІЇ (Для інших сторінок)
-   ========================================= */
-.section {
-  padding: 80px 0;
-  min-height: 60vh;
-}
-
+/* Глобальні класи контейнерів */
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+  min-height: 60vh;
 }
 
 .section-title {
@@ -223,31 +74,14 @@ header {
   text-align: center;
 }
 
-/* --- Стилі карток (Проєкти, Команда) --- */
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 24px;
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-blue);
-}
-
-.projects-grid, 
-.team-grid, 
-.activity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
-}
-
+/* Допоміжні класи */
 .muted {
   color: var(--text-gray);
   font-size: 14px;
+}
+
+.center {
+  text-align: center;
 }
 
 h4 {
@@ -255,24 +89,11 @@ h4 {
   font-size: 20px;
 }
 
-/* --- Елементи форм та пошуку --- */
-input, select, textarea {
-  width: 100%;
-  padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--card-border);
-  border-radius: 8px;
-  color: white;
-  font-family: inherit;
-  margin-bottom: 16px;
-}
+/* =========================================
+   3. UI КОМПОНЕНТИ (COMPONENTS)
+   ========================================= */
 
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent-blue);
-}
-
-/* --- Кнопки --- */
+/* --- Кнопки (Buttons) --- */
 .btn {
   display: inline-block;
   padding: 10px 24px;
@@ -290,7 +111,38 @@ input:focus, select:focus, textarea:focus {
   margin-top: 12px;
 }
 
-/* --- Фільтри --- */
+/* --- Форми (Inputs, Selects) --- */
+input, select, textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+  margin-bottom: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}
+
+/* --- Базова Картка (Card) --- */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-blue);
+}
+
+/* --- Фільтри та Контроли --- */
 .projects-controls, 
 .team-controls {
   display: flex;
@@ -318,226 +170,503 @@ input:focus, select:focus, textarea:focus {
   border-color: var(--accent-blue);
 }
 
-/* =========================================
-   6. FOOTER (Підвал)
-   ========================================= */
-footer {
-  background: #0f1113;
-  padding: 40px 0;
-  border-top: 1px solid var(--card-border);
-  text-align: center;
-  color: var(--text-gray);
-  margin-top: auto; /* Притискає футер до низу */
+/* --- Загальні Сітки (Grids) --- */
+.projects-grid, 
+.team-grid, 
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 /* =========================================
-   7. АДАПТИВНІСТЬ (Мобільні телефони)
+   4. HEADER (ШАПКА)
    ========================================= */
+header {
+  width: 100%;
+  height: var(--header-height);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-129 {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.logo img {
+  width: 40px;  
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text a {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 18px; 
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+/* Навігація */
+.head-center {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);    
+  border-radius: 100px;                      
+  padding: 10px 32px;                        
+  backdrop-filter: blur(10px); 
+}
+
+.head-center ul {
+  display: flex;
+  gap: 32px;
+}
+
+.head-center a {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+.head-center a:hover,
+.head-center a.active {
+  color: var(--text-white);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Адаптив хедера */
 @media (max-width: 900px) {
-  .hero1 {
-    flex-direction: column-reverse; /* Картинка зверху, текст знизу */
-    text-align: center;
-    gap: 30px;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .frame-129 {
-    padding: 0 15px;
-  }
-
   .head-center {
     display: none; /* Приховуємо меню на мобільних */
   }
-  
+}
+
+/* =========================================
+   5. HERO SECTION (ГОЛОВНИЙ ЕКРАН)
+   ========================================= */
+.hero {
+  background: linear-gradient(
+    302.51deg, 
+    rgba(0, 0, 0, 0.5) 4.3%, 
+    rgba(56, 83, 222, 0.5) 25.56%, 
+    rgba(0, 0, 0, 0.5) 50.18%, 
+    rgba(56, 83, 222, 0.5) 78.49%, 
+    rgba(0, 0, 0, 0.5) 101.22%, 
+    rgba(56, 83, 222, 0.5) 117.8%
+  );
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--header-height);
+  position: relative;
+}
+
+.frame-132 {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 20px;
+}
+
+.hero1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero1 .text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--text-white);
+}
+
+.hero-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-gray);
+  margin-bottom: 32px;
+}
+
+.photo1 {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(56, 83, 222, 0.2));
+}
+
+/* Адаптив Hero */
+@media (max-width: 900px) {
+  .hero1 {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .frame-129 {
+    padding: 0 15px;
+  }
   .projects-controls {
     flex-direction: column;
   }
 }
 
 /* =========================================
-   СЕКЦІЯ МІСІЇ (1 + 3)
+   6. СЕКЦІЯ МІСІЇ (1 + 3 БЛОКИ)
    ========================================= */
-
 .mixed-grid {
-    display: grid;
-    /* 3 рівні колонки */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .grid-card {
-    background: #0b0c0e; /* Темний фон */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Тонка рамка */
-    border-radius: 16px;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: transform 0.3s ease;
+  background: #0b0c0e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease;
 }
 
 .grid-card:hover {
-    border-color: #4B6CFF; /* Синя рамка при наведенні */
-    transform: translateY(-5px);
+  border-color: #4B6CFF;
+  transform: translateY(-5px);
 }
 
-/* Цей клас розтягує блок "МІСІЯ" на всю ширину */
+/* Цей клас розтягує блок на всю ширину */
 .full-width {
-    grid-column: span 3; 
-    /* Можна зробити текст місії трохи більшим, якщо хочеш */
-
-    margin-bottom: 40px;
+  grid-column: span 3; 
+  margin-bottom: 40px;
 }
 
 .card-title {
-    font-family: 'Manrope', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase; /* Великі літери для заголовків */
-    margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
 }
 
 .card-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #9aa3b2; /* Світло-сірий колір */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #9aa3b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* --- АДАПТИВНІСТЬ --- */
-
+/* Адаптив Місії */
 @media (max-width: 1024px) {
-    .mixed-grid { grid-template-columns: repeat(2, 1fr); }
-    .full-width { grid-column: span 2; }
-    .grid-card:last-child { grid-column: span 2; }
+  .mixed-grid { grid-template-columns: repeat(2, 1fr); }
+  .full-width { grid-column: span 2; }
+  .grid-card:last-child { grid-column: span 2; }
 }
 
 @media (max-width: 600px) {
-    .mixed-grid { grid-template-columns: 1fr; }
-    .full-width, .grid-card:last-child { grid-column: auto; }
+  .mixed-grid { grid-template-columns: 1fr; }
+  .full-width, .grid-card:last-child { grid-column: auto; }
 }
 
 /* =========================================
-   СТАТИСТИКА (Згідно макету)
+   7. СЕКЦІЯ РЕЗУЛЬТАТІВ (ЦИФРИ)
    ========================================= */
+.results-section {
+  padding-top: 0;
+  padding-bottom: 80px;
+}
 
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.result-card {
+  background: #0b0c0e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-card:hover {
+  border-color: #4B6CFF;
+  transform: translateY(-5px);
+}
+
+.res-num {
+  font-family: 'Manrope', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #4b6cff, #2f81f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.res-desc {
+  font-size: 16px;
+  color: #9aa3b2;
+  font-weight: 500;
+}
+
+/* Адаптив Результатів */
+@media (max-width: 900px) {
+  .results-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .results-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================
+   8. СЕКЦІЯ СТАТИСТИКИ (АЛЬТЕРНАТИВНА)
+   ========================================= */
 .stats-section {
-    padding: 60px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Тонка лінія знизу */
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .stats-row {
-    display: flex;
-    justify-content: space-between; /* Рівномірно розподіляємо по ширині */
-    align-items: center;
-    flex-wrap: wrap; /* Щоб на мобільному не ламалось */
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .stat-item {
-    text-align: center;
-    flex: 1; /* Всі блоки однакової ширини */
+  text-align: center;
+  flex: 1;
 }
 
-/* Стиль цифр (Великі і Градієнтні) */
 .stat-num {
-    font-family: 'Manrope', sans-serif;
-    font-weight: 800; /* Дуже жирний */
-    font-size: 64px;  /* Великий розмір */
-    line-height: 1.1;
-    margin-bottom: 8px;
-
-    /* Градієнт тексту (Синій) */
-    background: linear-gradient(90deg, #4b6cff, #2f81f7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #4b6cff, #2f81f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Стиль підпису (Сірий) */
 .stat-desc {
-    font-size: 18px;
-    font-weight: 500;
-    color: #9aa3b2; /* Світло-сірий колір */
+  font-size: 18px;
+  font-weight: 500;
+  color: #9aa3b2;
 }
 
-/* Адаптивність для мобілок */
 @media (max-width: 768px) {
-    .stat-num {
-        font-size: 48px; /* Трохи менше на телефоні */
-    }
-    .stat-item {
-        flex: 0 0 45%; /* По два в рядок */
-        margin-bottom: 20px;
-    }
+  .stat-num { font-size: 48px; }
+  .stat-item { flex: 0 0 45%; margin-bottom: 20px; }
 }
 
 /* =========================================
-   СЕКЦІЯ КЕЙСІВ (СІТКА КАРТОК)
+   9. СЕКЦІЯ КЕЙСІВ
    ========================================= */
-
 .cases-grid {
-    display: grid;
-    /* Автоматично створює колонки шириною мінімум 350px */
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px; /* Відступ між картками */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
 }
 
-/* Картка кейсу */
 .case-card {
-    background: #0b0c0e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    overflow: hidden; /* Щоб картинка не вилазила за кути */
-    padding: 0; /* Прибираємо стандартний відступ, щоб картинка була на всю ширину */
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s;
+  background: #0b0c0e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
 }
 
 .case-card:hover {
-    transform: translateY(-5px);
-    border-color: #4B6CFF;
+  transform: translateY(-5px);
+  border-color: #4B6CFF;
 }
 
-/* Місце під картинку */
 .case-thumb {
-    width: 100%;
-    height: 220px; /* Висота картинки */
-    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Контент картки (текст) */
 .card-content {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex-grow: 1; /* Розтягує контент на всю висоту */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
 }
 
 .card-content h4 {
-    font-family: 'Manrope', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
 }
 
 .card-content .muted {
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    flex-grow: 1; /* Текст займає вільне місце, притискаючи кнопку до низу */
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
 }
 
-/* Адаптивність */
 @media (max-width: 768px) {
-    .cases-grid {
-        grid-template-columns: 1fr; /* Одна колонка на телефоні */
-    }
+  .cases-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================
+   10. FOOTER (ПІДВАЛ)
+   ========================================= */
+.site-footer {
+  background: #070708;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+  padding-bottom: 30px;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Лого та інфо */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.footer-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #9aa3b2;
+  max-width: 300px;
+}
+
+/* Заголовки */
+.footer-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Посилання */
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  font-size: 15px;
+  color: #9aa3b2;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #4B6CFF;
+  padding-left: 5px;
+}
+
+/* Копірайт */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-legal a {
+  color: #555;
+  text-decoration: underline;
+}
+
+.footer-legal a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Адаптив Футера */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+}
+
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .footer-logo, .footer-bottom { justify-content: center; }
+  .footer-desc { margin: 0 auto; }
 }
