@@ -1,112 +1,184 @@
-/* js/main.js */
 document.addEventListener("DOMContentLoaded", () => {
-  // BURGER MENU
-  const burger = document.getElementById("burger");
-  if (burger) {
-    burger.addEventListener("click", () => {
-      document.querySelector("header .nav").classList.toggle("open");
-      burger.classList.toggle("open");
-    });
-  }
+    
+    // 1. ЗАВАНТАЖЕННЯ ХЕДЕРА (Розумна функція)
+    loadHeader();
 
-  // Projects: filter + search + pagination (if projectsGrid exists)
-  (function () {
+    // 2. ЗАВАНТАЖЕННЯ ФУТЕРА
+    // Визначаємо шлях залежно від того, де ми є
+    const isPages = window.location.pathname.includes("/pages/");
+    const footerPath = isPages ? "footer.html" : "pages/footer.html";
+    loadComponent("footer", footerPath);
+
+    // 3. Ініціалізація логіки сторінок
+    initProjects();
+    initTeam();
+    initContactForm();
+});
+
+// ==================================================
+// 1. ЛОГІКА ХЕДЕРА (НАЙВАЖЛИВІШЕ)
+// ==================================================
+
+function loadHeader() {
+    // Перевіряємо, чи ми в папці 'pages'
+    const isPagesFolder = window.location.pathname.includes("/pages/");
+    
+    // Якщо ми в папці pages, файл лежить поруч ("header.html")
+    // Якщо ми в корені, файл лежить у папці ("pages/header.html")
+    const headerPath = isPagesFolder ? "header.html" : "pages/header.html";
+
+    const placeholder = document.getElementById("header-placeholder") || document.getElementById("header");
+    if (!placeholder) return;
+
+    fetch(headerPath)
+        .then(response => {
+            if (!response.ok) throw new Error("Header not found");
+            return response.text();
+        })
+        .then(html => {
+            placeholder.innerHTML = html;
+            
+            // Якщо ми на внутрішній сторінці, треба виправити шляхи (додати ../)
+            if (isPagesFolder) {
+                fixPathsForSubpages();
+            }
+
+            // Підсвітити активне посилання
+            setActiveLink();
+        })
+        .catch(error => console.error("Error loading header:", error));
+}
+
+function fixPathsForSubpages() {
+    // Виправляємо картинки (src="images/...") -> (src="../images/...")
+    const images = document.querySelectorAll("header img, #header img, #header-placeholder img");
+    images.forEach(img => {
+        const src = img.getAttribute("src");
+        // Якщо шлях не починається з http або ../, додаємо ../
+        if (src && !src.startsWith("http") && !src.startsWith("../")) {
+            img.setAttribute("src", "../" + src);
+        }
+    });
+
+    // Виправляємо посилання
+    const links = document.querySelectorAll("header a, #header a, #header-placeholder a");
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href) {
+            if (href === "index.html") {
+                // Посилання на головну має вести на рівень вгору
+                link.setAttribute("href", "../index.html");
+            } else if (href.startsWith("pages/")) {
+                // Якщо ми вже в папці pages, то "pages/team.html" стає просто "team.html"
+                link.setAttribute("href", href.replace("pages/", ""));
+            }
+        }
+    });
+}
+
+function setActiveLink() {
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll(".head-center a");
+
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+        // Перевіряємо, чи посилання веде на поточну сторінку
+        if (href && (href === currentPath || href.endsWith(currentPath))) {
+            link.classList.add("active");
+        }
+    });
+}
+
+// ==================================================
+// 2. ДОПОМІЖНА ФУНКЦІЯ (для футера)
+// ==================================================
+function loadComponent(elementId, filePath, callback) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    fetch(filePath)
+        .then(response => {
+            if (!response.ok) throw new Error(`Error loading ${filePath}`);
+            return response.text();
+        })
+        .then(data => {
+            element.innerHTML = data;
+            if (callback) callback();
+        })
+        .catch(err => console.error(err));
+}
+
+// ==================================================
+// 3. БІЗНЕС-ЛОГІКА (Проєкти, Команда, Контакти)
+// ==================================================
+
+// === Логіка Проєктів ===
+function initProjects() {
     const grid = document.getElementById("projectsGrid");
-    if (!grid) return;
+    if (!grid) return; 
 
     const filterBtns = document.querySelectorAll(".filter-btn");
     const searchInput = document.getElementById("projectSearch");
-    const paginationEl = document.getElementById("pagination");
-    let items = Array.from(grid.querySelectorAll(".project-card"));
-    const perPage = 6;
-    let currentPage = 1;
-    let currentFilter = "all";
+    const items = Array.from(grid.querySelectorAll(".project-card"));
 
-    function render() {
-      const q = (searchInput?.value || "").trim().toLowerCase();
-      let filtered = items.filter(it => {
-        const cat = it.dataset.category || "all";
-        const matchesFilter = currentFilter === "all" || cat === currentFilter;
-        const txt = (it.textContent || "").toLowerCase();
-        const matchesSearch = q === "" || txt.includes(q);
-        return matchesFilter && matchesSearch;
-      });
-
-      const total = filtered.length;
-      const pages = Math.max(1, Math.ceil(total / perPage));
-      if (currentPage > pages) currentPage = pages;
-      const start = (currentPage - 1) * perPage;
-      const visible = filtered.slice(start, start + perPage);
-
-      items.forEach(it => it.style.display = "none");
-      visible.forEach(it => it.style.display = "block");
-
-      // pagination
-      if (paginationEl) {
-        paginationEl.innerHTML = "";
-        for (let p = 1; p <= pages; p++) {
-          const btn = document.createElement("button");
-          btn.className = "pag-btn" + (p === currentPage ? " active" : "");
-          btn.textContent = p;
-          btn.addEventListener("click", () => {
-            currentPage = p;
-            render();
-            window.scrollTo({ top: grid.offsetTop - 100, behavior: "smooth" });
-          });
-          paginationEl.appendChild(btn);
-        }
-      }
-    }
-
-    filterBtns.forEach(b => {
-      b.addEventListener("click", () => {
-        filterBtns.forEach(x => x.classList.remove("active"));
-        b.classList.add("active");
-        currentFilter = b.dataset.filter || "all";
-        currentPage = 1;
-        render();
-      });
+    // Фільтрація по кнопках
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            
+            const filter = btn.dataset.filter;
+            filterProjects(items, filter, searchInput.value);
+        });
     });
 
-    if (searchInput) searchInput.addEventListener("input", () => { currentPage = 1; render(); });
+    // Пошук
+    searchInput.addEventListener("input", (e) => {
+        const activeBtn = document.querySelector(".filter-btn.active");
+        const filter = activeBtn ? activeBtn.dataset.filter : "all";
+        filterProjects(items, filter, e.target.value);
+    });
+}
 
-    render();
-  })();
+function filterProjects(items, category, searchText) {
+    const search = searchText.toLowerCase().trim();
 
-  // Team search
-  (function () {
-    const input = document.getElementById("teamSearch");
+    items.forEach(item => {
+        const itemCat = item.dataset.category;
+        const text = item.textContent.toLowerCase();
+
+        const matchCat = category === "all" || itemCat === category;
+        const matchSearch = text.includes(search);
+
+        item.style.display = (matchCat && matchSearch) ? "block" : "none";
+    });
+}
+
+// === Логіка Команди ===
+function initTeam() {
+    const searchInput = document.getElementById("teamSearch");
     const grid = document.getElementById("teamGrid");
-    if (!input || !grid) return;
-    const members = Array.from(grid.querySelectorAll(".member-card"));
-    input.addEventListener("input", () => {
-      const q = input.value.trim().toLowerCase();
-      members.forEach(m => {
-        const txt = (m.textContent || "").toLowerCase();
-        m.style.display = q === "" || txt.includes(q) ? "block" : "none";
-      });
-    });
-  })();
+    if (!searchInput || !grid) return;
 
-  // Contact form simple validation
-  (function () {
+    const members = Array.from(grid.querySelectorAll(".member-card"));
+
+    searchInput.addEventListener("input", (e) => {
+        const val = e.target.value.toLowerCase().trim();
+        members.forEach(member => {
+            const text = member.textContent.toLowerCase();
+            member.style.display = text.includes(val) ? "block" : "none";
+        });
+    });
+}
+
+// === Логіка Контактів ===
+function initContactForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
-    const result = document.getElementById("formResult");
+
     form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = form.querySelector("[name=name]").value.trim();
-      const email = form.querySelector("[name=email]").value.trim();
-      const msg = form.querySelector("[name=message]").value.trim();
-      if (!name || !email || !msg) {
-        result.textContent = "Будь ласка, заповніть всі обов'язкові поля.";
-        result.classList.add("error");
-        return;
-      }
-      result.textContent = "Дякуємо! Повідомлення прийнято (симул.).";
-      result.classList.remove("error");
-      result.classList.add("success");
-      form.reset();
+        e.preventDefault();
+        alert("Дякуємо! Повідомлення відправлено (демо).");
+        form.reset();
     });
-  })();
-});
+}
