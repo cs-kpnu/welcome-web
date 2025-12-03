@@ -8,14 +8,15 @@ header {
 }
 
 .frame-129 {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  height: 69px;
-  position: absolute;
-  top: 40px;
-  padding: 0 77px;
-  gap: 171px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: 69px;
+    position: absolute;
+    top: 40px;
+    padding: 0 77px;
+    gap: 171px;
 }
 
 .logo {
