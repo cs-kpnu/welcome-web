@@ -1,0 +1,111 @@
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(302.51deg, rgba(0, 0, 0, 0.5) 4.3%, rgba(56, 83, 222, 0.5) 25.56%, rgba(0, 0, 0, 0.5) 50.18%, rgba(56, 83, 222, 0.5) 78.49%, rgba(0, 0, 0, 0.5) 101.22%, rgba(56, 83, 222, 0.5) 117.8%);
+    width: 100%;
+    height: 733px;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame-132 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 1280px;
+    height: 518px; 
+    margin: 70px auto 0 auto;
+}
+
+.hero1 {
+    display: flex;
+    flex-direction: row;
+    gap: 74px;
+    width: 100%;
+    height: 518px;
+}
+
+.photo1 {
+    width: 543px;
+    height: 518px;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 676px;
+    height: auto;
+    min-height: 362px;
+}
+
+.hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 82px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    width: 676px;
+    height: 164px;
+}
+
+.hero-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.8);
+    width: 635px;
+    height: 162px;
+}
+
+.line {
+    border: 2px solid #3853DE;
+    width: auto;
+    margin: auto 0 0 0;
+}
+
+/* Mission Section Styles */
+
+.mission-section {
+    margin: 0;
+    height: 932px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 100%),
+        url('../images/photo_hero.png') center / cover no-repeat;
+    z-index: 1;
+}
+
+.mission-container {
+    width: 1136px;
+    height: 772px;
+    margin: 80px auto 0 auto;
+    z-index: 2;
+}
+
+.mission-title-container {
+    width: 1136px;
+    height: 221px;
+    border-radius: 16px;
+    border-width: 0.8px;
+    background: #00000066;
+    border: 0.8px solid rgb(162, 187, 234); 
+    /* border-image: linear-gradient(to right, #FFFFFF, #3853DE) 1;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #FFFFFF, #3853DE); */
+    box-shadow: 0px 25px 50px -12px #00000040;
+}
