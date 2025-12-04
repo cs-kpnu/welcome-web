@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
 header {
-    width: 100%;
+    width: 1280px;
     height: 69px;
-    top: 40px;
-    z-index: 10;
+    margin: 40px auto 0 auto;
 }
 
 .frame-129 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: auto;
+    width: 1280px;
     height: 69px;
-    position: absolute;
-    top: 40px;
-    padding: 0 77px;
     gap: 171px;
 }
 
