@@ -117,11 +117,11 @@
     display: flex;
     flex-direction: column;
 }
-.misiya{
-display:flex ;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-border: #000000;
 
+.misiya{
+    display:flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: #000000;
 }
