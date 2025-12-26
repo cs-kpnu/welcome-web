@@ -4,50 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>YouthForce — Команда</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/team.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-  <header></header>
+  <div id="header"></div>
 
-  <main class="section">
-    <div class="container">
-      <h1 class="section-title">Наша команда</h1>
-
-      <div class="team-controls">
-        <input id="teamSearch" type="search" placeholder="Пошук по імені або ролі" style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)">
-      </div>
-
-      <div id="teamGrid" class="team-grid">
-        <article class="member-card card">
-          <div class="member-photo"></div>
-          <h4>Іван Іванов</h4>
-          <p class="muted">Керівник проєкту</p>
-          <p class="muted">Короткий опис ролі та досвіду.</p>
-        </article>
-
-        <article class="member-card card">
-          <div class="member-photo"></div>
-          <h4>Олена Петрів</h4>
-          <p class="muted">Координаторка</p>
-          <p class="muted">Короткий опис ролі та досвіду.</p>
-        </article>
-
-        <article class="member-card card">
-          <div class="member-photo"></div>
-          <h4>Микола Сидоренко</h4>
-          <p class="muted">Маркетинг</p>
-          <p class="muted">Короткий опис ролі та досвіду.</p>
-        </article>
-
-        <!-- додаткові -->
-      </div>
+  <section>
+    <div>
+      <h2>Наша команда</h2>
     </div>
-  </main>
+    <div>
+      <button class="frame-21">
+        Фільтри v
+      </button>
+    </div>
+  </section>
 
-  <footer></footer>
+  <div id="footer"></div>
 
-  <script src="js/layout.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+  <!--<script src="js/layout.js"></script>
+  <script src="js/main.js"></script>-->
 </body>
 </html>
