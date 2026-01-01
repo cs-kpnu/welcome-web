@@ -3,7 +3,7 @@
   padding: 0;
   color: white;
 }
-.group-21 {
+.group-21, .pagination-previous, .pagination-next {
   background-color: #2b2b2b;
   color: white;
   border: none;
@@ -26,5 +26,8 @@ header h2{
   justify-content: center;
 }
 .frame-145, .frame-207, .frame-209{
+  display: flex;
+}
+.pagination{
   display: flex;
 }
