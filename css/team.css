@@ -25,3 +25,6 @@ header h2{
   align-items: center;
   justify-content: center;
 }
+.frame-145, .frame-207, .frame-209{
+  display: flex;
+}
