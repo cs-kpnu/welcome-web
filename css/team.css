@@ -3,6 +3,10 @@
   padding: 0;
   color: white;
 }
+.button-group-21{
+  margin-left: 5%;
+}
+
 .group-21, .pagination-previous, .pagination-next {
   background-color: #2b2b2b;
   color: white;
@@ -20,20 +24,28 @@
 .group-21:hover {
   background-color: #3a3a3a;
 }
-header h2{
+.header h2{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .frame-145, .frame-207, .frame-209{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pagination{
   display: flex;
+  justify-content: center;
 }
-
+.container{
+  padding: 20px;
+  margin: 20px;
+}
 .containerimg{
   background-color: white;
+  width: 350px;
+  height: 350px;
 }
 .img{
   width: 100%;
