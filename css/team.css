@@ -46,17 +46,37 @@
   background-color: white;
   width: 350px;
   height: 350px;
+  display: flex;
+  position: relative;
+  display: flex;      
+  align-items: center; 
+  justify-content: center;
 }
+.containerleft{
+  position: absolute;
+  top: 10px;    
+  left: 10px;   
+  background-color: #3853DE;
+  color: white;
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: 10px;
+}
+.conteinerright{
+  position: absolute;
+  top: 10px;    
+  right: 10px;  
+  background-color: #57BA69;
+  color: white;
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: 10px;
+}
+
 .img{
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .data-start{
   display: flex;
-}
-.containerleft{
-  position: relative;
-}
-.containerright{
-  position: relative;
 }
