@@ -16,6 +16,7 @@
   display: flex;
   justify-content: left;
   margin-left: 5%;
+  
 }
 .pagination{
   display: flex;
@@ -57,6 +58,7 @@
   background-color: white;
   width: 450px;
   height: 450px;
+  border-radius: 28px;
   display: flex;
   position: relative;
   display: flex;      
@@ -65,23 +67,23 @@
 }
 .container-left{
   position: absolute;
-  top: 10px;    
-  left: 10px;   
+  top: 15px;    
+  left: 15px;   
   background-color: #3853DE;
   color: white;
-  padding: 5px 10px;
+  padding: 10px 15px;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .conteiner-right{
   position: absolute;
-  top: 10px;    
-  right: 10px;  
+  top: 15px;    
+  right: 15px;  
   background-color: #57BA69;
   color: white;
-  padding: 5px 10px;
+  padding: 10px 15px;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .img{
