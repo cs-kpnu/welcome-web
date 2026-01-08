@@ -3,11 +3,22 @@
   padding: 0;
   color: white;
 }
-.button-group-21{
+
+/*Заголовок*/
+.header h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Кнопки для фільтрування та переходу між стрінками*/
+.group-21{
   margin-left: 5%;
 }
-
-.group-21, .pagination-previous, .pagination-next {
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+.button-group-21, .pagination-previous, .pagination-next {
   background-color: #2b2b2b;
   color: white;
   border: none;
@@ -24,35 +35,32 @@
 .group-21:hover {
   background-color: #3a3a3a;
 }
-.header h2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+/*Рядки з картками*/
 .frame-145, .frame-207, .frame-209{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.pagination{
-  display: flex;
-  justify-content: center;
-}
+/*картки*/
 .container{
-  padding: 20px;
-  margin: 20px;
+  margin: 8px 16px;
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  border-radius: 28px;
+  width: 450px;
+  height: 700px;
 }
-.containerimg{
+.container-img{
   background-color: white;
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   display: flex;
   position: relative;
   display: flex;      
   align-items: center; 
   justify-content: center;
 }
-.containerleft{
+.container-left{
   position: absolute;
   top: 10px;    
   left: 10px;   
@@ -62,7 +70,7 @@
   margin: 0;
   border-radius: 10px;
 }
-.conteinerright{
+.conteiner-right{
   position: absolute;
   top: 10px;    
   right: 10px;  
@@ -77,9 +85,40 @@
   width: 100%;
   height: auto;
 }
+.container-text{
+  width: 450px;
+  height: 200px;
+}
+.container-text p{
+  padding: 5px 10px;
+}
+
+.frame-170-1{
+  font-size: 26px;
+}
+.paragraph{
+  color: #3853DE;
+}
+
 .data-start{
   display: flex;
 }
-.frame-170-1{
-  size: 26px;
+.data-start .text-left{
+  color: grey;
+}
+
+.data-start .text-right{
+  padding-left: 40%;
+}
+
+.project{
+  display: flex;
+  
+}
+.project p{
+  background-color: white;
+  color: black;
+  padding: 7px 12px;
+  margin: 10px 5px;
+  border-radius: 10px;
 }
