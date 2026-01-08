@@ -9,9 +9,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 40px;
 }
 /*Кнопки для фільтрування та переходу між стрінками*/
 .group-21{
+  display: flex;
+  justify-content: left;
   margin-left: 5%;
 }
 .pagination{
@@ -48,7 +51,7 @@
   border: 1px solid rgba(225, 225, 225, 0.5);
   border-radius: 28px;
   width: 450px;
-  height: 700px;
+  height: 750px;
 }
 .container-img{
   background-color: white;
@@ -121,4 +124,17 @@
   padding: 7px 12px;
   margin: 10px 5px;
   border-radius: 10px;
+}
+.next{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3853DE;
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border-radius: 20px;
+}
+.next p{
+  background-color: #3853DE;
+  font-size: 20px;
 }
