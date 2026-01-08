@@ -131,8 +131,10 @@
   align-items: center;
   background-color: #3853DE;
   padding: 10px 15px;
-  margin: 10px 5px;
+  margin: 10px 22.5px;
   border-radius: 20px;
+  width: 90%;
+
 }
 .next p{
   background-color: #3853DE;
