@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root {
+  --bg-top: #070708;
+  --bg-bottom: #0f1113;
+  --panel: rgba(255, 255, 255, 0.03);
+  --card: #0b0c0e;
+  --muted: #9aa3b2;
+  --text: #e9f0ff;
+  --accent: linear-gradient(90deg, #4b6cff, #2f81f7);
+  --accent-flat: #4b6cff;
+  --radius: 16px;
+  --container: 1200px;
+  --glass: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.06);
+}
+
+/* --- Базові налаштування --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+    color: var(--text);
+    margin: 0;
+    min-height: 100vh; /* Щоб фон розтягувався на весь екран */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.frame179 {
+    width: 100%;
+    padding: 40px 20px;
+    flex-grow: 1;
+}
+.frame221 {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+.group22 {
+    margin-top: -40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center top;
+    text-align: center top;
+}
+/* Обмеження ширини контенту */
+.container-wrapper {
+    width: 100%;
+    max-width: var(--container);
+}
+
+.filters-wrapper {
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+
+.custom-select{
+    width: 157px;
+    height: 62px;
+    appearance: none;
+    background-color: #262626;
+    color: var(--text);
+    border: 1.6px solid var(--border);
+        padding: 14px 44px 14px 16px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239aa3b2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+
+.custom-select :hover, .custom-select :focus{
+    border-color: var(--accent-flat)
+}
+
+.custom-select option{
+    background-color: #262626;
+    border-radius: 8px;
+    color: var(--text);
+    padding: 10px;
+}
+/* --- Сітка (Grid Layout FR208) --- */
+.projects-grid {
+    display: grid;
+    grid-auto-columns: 407px;
+    grid-auto-rows: 580px;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Картка проєкту (FR206) --- */
+.project-card {
+    border: 1px solid white;
+    border-radius: 28px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    background-color: #080D10;
+    height: auto;
+    min-height: 580px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(75, 108, 255, 0.4); /* Підсвітка кольором accent-flat */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-img {
+    display: block;
+    width: calc(100% + 48px);
+    margin: -24px -24px 20px -24px;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 10px 0;
+    color: var(--text);
+    letter-spacing: -0.5px;
+}
+
+.project-badge {
+    position: absolute;
+    width: 87px;
+    height: 35px;
+    top: 16px;
+    right: 18px;
+    background: #3853DE; /* трохи світліший синій */
+    color: white;
+    padding:10px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 0 6px 18px rgba(74,100,255,0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+    text-transform: capitalize;
+    font-family: Arial, sans-serif;
+}
+
+.project-meta {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Виділення статусу */
+.project-meta strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 15px 0 20px 0;
+    line-height: 1.5;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Обмеження до 3 рядків */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- Кнопка в картці --- */
+.details-btn {
+    background: var(--card);
+    color: var(--accent-flat);
+    border: 1px solid var(--accent-flat);
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    text-align: center;
+    align-items: center;
+}
+
+.details-btn:hover {
+    background-color: rgba(11,12,14,0.9);
+    color: var(--accent-flat);
+    border-color: var(--accent-flat);
+}
+
+/* --- Пагінація (FR204) --- */
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--muted);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.page-btn:hover {
+    border-color: var(--accent-flat);
+    color: var(--text);
+}
+
+.page-btn.active {
+    background: var(--accent-flat);
+    color: white;
+    border-color: var(--accent-flat);
+    box-shadow: 0 0 15px rgba(75, 108, 255, 0.3);
+}

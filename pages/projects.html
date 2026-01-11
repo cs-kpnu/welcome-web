@@ -1,66 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YouthForce — Проєкти</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші Проєкти</title>
+    <link rel="stylesheet" href="../css/projects.css">
 </head>
 <body>
-
-  <header></header>
-
-  <main class="section">
-    <div class="container">
-      <h1 class="section-title">Наші проєкти</h1>
-
-      <div class="projects-controls">
-        <div class="filter">
-          <button class="filter-btn active" data-filter="all">Усі</button>
-          <button class="filter-btn" data-filter="education">Освіта</button>
-          <button class="filter-btn" data-filter="events">Івенти</button>
-          <button class="filter-btn" data-filter="community">Спільнота</button>
+    <section class="frame179">
+        <div class="group22">
+                <h1 class="page-title">Наші Проєкти</h1>
         </div>
+        <div class="filters-wrapper">
+                <select id="project-filter" class="custom-select" onchange="setFilter(this.value)">
+                    <option value="" disabled selected hidden>Фільтр</option>
+                    <option value="Active">Активний</option>
+                    <option value="Completed">Завершений</option>
+                </select>
+            </div>
+        <div class="frame221">
+            <div id="projects-container" class="projects-grid"></div>
+        </div>
+        <div id="pagination-container" class="pagination"></div>
+    </section>
 
-        <input id="projectSearch" type="search" placeholder="Пошук проєкту..." style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)">
-      </div>
-
-      <div id="projectsGrid" class="projects-grid">
-        <article class="project-card card" data-category="education">
-          <div class="project-thumb"></div>
-          <h4>Edu Bootcamp</h4>
-          <p class="muted">Інтенсив для початківців</p>
-          <a class="btn small" href="#">Детальніше</a>
-        </article>
-
-        <article class="project-card card" data-category="events">
-          <div class="project-thumb"></div>
-          <h4>Hackathon 2025</h4>
-          <p class="muted">Щорічний хакатон</p>
-          <a class="btn small" href="#">Детальніше</a>
-        </article>
-
-        <article class="project-card card" data-category="community">
-          <div class="project-thumb"></div>
-          <h4>Meetups</h4>
-          <p class="muted">Зустрічі спільноти</p>
-          <a class="btn small" href="#">Детальніше</a>
-        </article>
-
-        <!-- додайте дублікати для демонстрації пагінації -->
-        <article class="project-card card" data-category="education"><div class="project-thumb"></div><h4>Проєкт 4</h4><p class="muted">Коротко</p></article>
-        <article class="project-card card" data-category="events"><div class="project-thumb"></div><h4>Проєкт 5</h4><p class="muted">Коротко</p></article>
-        <article class="project-card card" data-category="community"><div class="project-thumb"></div><h4>Проєкт 6</h4><p class="muted">Коротко</p></article>
-        <article class="project-card card" data-category="education"><div class="project-thumb"></div><h4>Проєкт 7</h4><p class="muted">Коротко</p></article>
-      </div>
-
-      <div id="pagination" class="pagination"></div>
-    </div>
-  </main>
-
-  <footer></footer>
-
-  <script src="js/layout.js"></script>
-  <script src="js/main.js"></script>
+    <script src="../js/projects.js"></script>
 </body>
 </html>
