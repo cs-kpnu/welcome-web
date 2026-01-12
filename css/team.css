@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/*Заголовок*/
+.header h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+/*Кнопки для фільтрування та переходу між стрінками*/
+.group-21{
+  display: flex;
+  justify-content: left;
+  margin-left: 5%;
+  
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+.button-group-21, .pagination-previous, .pagination-next {
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.group-21:hover {
+  background-color: #3a3a3a;
+}
+
+/*Рядки з картками*/
+.frame-145, .frame-207, .frame-209{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*картки*/
+.container{
+  margin: 8px 16px;
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  border-radius: 28px;
+  width: 450px;
+  height: 750px;
+}
+.container-img{
+  background-color: white;
+  width: 450px;
+  height: 450px;
+  border-radius: 28px;
+  display: flex;
+  position: relative;
+  display: flex;      
+  align-items: center; 
+  justify-content: center;
+}
+.container-left{
+  position: absolute;
+  top: 15px;    
+  left: 15px;   
+  background-color: #3853DE;
+  color: white;
+  padding: 10px 15px;
+  margin: 0;
+  border-radius: 15px;
+}
+.conteiner-right{
+  position: absolute;
+  top: 15px;    
+  right: 15px;  
+  background-color: #57BA69;
+  color: white;
+  padding: 10px 15px;
+  margin: 0;
+  border-radius: 15px;
+}
+
+.img{
+  width: 100%;
+  height: auto;
+}
+.container-text{
+  width: 450px;
+  height: 200px;
+}
+.container-text p{
+  padding: 5px 10px;
+}
+
+.frame-170-1{
+  font-size: 26px;
+}
+.paragraph{
+  color: #3853DE;
+}
+
+.data-start{
+  display: flex;
+}
+.data-start .text-left{
+  color: grey;
+}
+
+.data-start .text-right{
+  padding-left: 40%;
+}
+
+.project{
+  display: flex;
+  
+}
+.project p{
+  background-color: white;
+  color: black;
+  padding: 7px 12px;
+  margin: 10px 5px;
+  border-radius: 10px;
+}
+.next{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3853DE;
+  padding: 10px 15px;
+  margin: 10px 22.5px;
+  border-radius: 20px;
+  width: 90%;
+
+}
+.next p{
+  background-color: #3853DE;
+  font-size: 20px;
+}

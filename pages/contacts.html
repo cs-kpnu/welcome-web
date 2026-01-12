@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header></header>
+  <div id="header"></div>
 
   <main class="section">
     <div class="container">
@@ -55,8 +55,21 @@
   </main>
 
   <footer></footer>
-
-  <script src="js/layout.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+  <!--<script src="js/layout.js"></script>
+  <script src="js/main.js"></script>-->
 </body>
 </html>
