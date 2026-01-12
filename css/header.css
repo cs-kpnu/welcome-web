@@ -81,6 +81,10 @@ header {
     list-style: none;
 }
 
+.menu li:hover {
+    text-shadow: 0.8px 0 0 currentColor;
+}
+
 .menu li a {
     text-decoration: none;
     color: #FFFFFF;
