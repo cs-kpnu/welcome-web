@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
-
 header {
     width: 1280px;
     height: 69px;
     margin: 40px auto 0 auto;
 }
 
-.frame-129 {
+.header-content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,31 +13,32 @@ header {
     gap: 171px;
 }
 
-.logo {
+.header-logo {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 165px;
     height: 50px;
     gap: 16px;
 }
 
-.logo-image {
+.header-logo-image {
     width: 50px;
     height: 50px;
     overflow: hidden;
 }
 
-img {
+.header-logo-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.logo-text a {
+.header-logo-text {
     width: 99px;
     height: 36px;
     color: #FFFFFF;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
     font-size: 14px;
     font-weight: 600;
     line-height: 18px;
@@ -48,23 +47,60 @@ img {
     text-decoration: none;
 }
 
-.head-center {
-    background: #120F0F1A;
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     width: 678px;
     height: 69px;
-    border-radius: 8px;
-    list-style-type: none;
+    background: rgba(18, 15, 15, 0.1);
+    border-radius: 88px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.head-center ul{
+
+.menu ul {
+    max-width: 542px;
+    width: 100%;
+    padding-left: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu li {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 22px;
+    height: 17px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    list-style: none;
 }
-.head-center li{
-    display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+.menu li:hover {
+    text-shadow: 0.8px 0 0 currentColor;
 }
+
+.menu li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu-li-line {
+    display: none;
+    margin-top: 8px;
+    width: 52px;
+    border-top: 2px solid rgba(56, 83, 222, 1);
+}
+
+.menu ul li a.active {
+    font-weight: 700;
+}
+
+.menu ul li a.active + .menu-li-line {
+    display: block;
+}   
