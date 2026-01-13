@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YouthForce — Команда</title>
+  <title>Наша команда</title>
   <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/team.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -254,22 +255,6 @@
   </section>
 
   <div id="footer"></div>
-
-  <script>
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-      });
-  </script>
-  <script>
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
-  </script>
-  <!--<script src="js/layout.js"></script>
-  <script src="js/main.js"></script>-->
+  <script src="js/layout.js"></script>
 </body>
 </html>
