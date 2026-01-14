@@ -14,7 +14,7 @@
   --border: rgba(255, 255, 255, 0.06);
 }
 
-/* --- Базові налаштування --- */
+
 * {
     box-sizing: border-box;
 }
@@ -24,7 +24,7 @@ body {
     background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
     color: var(--text);
     margin: 0;
-    min-height: 100vh; /* Щоб фон розтягувався на весь екран */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,7 +144,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(75, 108, 255, 0.4); /* Підсвітка кольором accent-flat */
+    border-color: rgba(75, 108, 255, 0.4); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -172,7 +172,7 @@ body {
     height: 35px;
     top: 16px;
     right: 18px;
-    background: #3853DE; /* трохи світліший синій */
+    background: #3853DE; 
     color: white;
     padding:10px;
     border-radius: 40px;
@@ -210,7 +210,7 @@ body {
     line-height: 1.5;
     flex-grow: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Обмеження до 3 рядків */
+    -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
