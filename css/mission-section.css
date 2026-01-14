@@ -1,0 +1,113 @@
+/* Mission Section Styles */
+.mission-bg-blob {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 70%;
+    background: rgba(56, 83, 222, 0.3);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.mission-bg-blob.left {
+    left: -186px;
+    top: -102px;
+}
+
+.mission-bg-blob.right {
+    right: -90px;
+    top: 104px;
+}
+
+.mission-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 1300px;
+    width: 100%;
+    gap: 36px;
+}
+
+.mission-description {
+    max-width: 974px;
+    width: 100%;
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0;
+    z-index: 1;
+}
+
+.mission-description-items {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 60px;
+}
+
+.mission-image {
+    max-width: 654px;
+    width: 100%;
+    height: 545px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(56, 83, 222, 0.1), rgba(56, 83, 222, 0.1)), url(../images/mission-image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mission-image.small-screen {
+    display: none;
+}
+
+.mission-description-items ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 566px;
+    width: 100%;
+    gap: 52px;
+    list-style: none;
+}
+
+.mission-description-items ul li {
+    border-left: 1px solid white;
+    padding-left: 24px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.mission-item-title {
+    font-weight: 600;
+}
+
+.mission-item-description {
+    font-weight: 300;
+}
+
+@media (max-width: 1260px) {
+    .mission-bg-blob {
+        display: none;
+    }
+
+    .mission-description-items {
+        gap: 10px;
+    }
+
+    .mission-image {
+        max-width: 500px;
+        height: 416px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .mission-description-items {
+        gap: 20px;
+    }
+
+    .mission-image {
+        max-width: 346px;
+        height: 288px;
+    }
+}

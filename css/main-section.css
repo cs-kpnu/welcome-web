@@ -1,0 +1,103 @@
+/* Main Section Styles */
+.main {
+    background: linear-gradient(302.51deg, rgba(0, 0, 0, 0.5) 4.3%, rgba(56, 83, 222, 0.5) 25.56%, rgba(0, 0, 0, 0.5) 50.18%, rgba(56, 83, 222, 0.5) 78.49%, rgba(0, 0, 0, 0.5) 101.22%, rgba(56, 83, 222, 0.5) 117.8%);
+    border-bottom: 2px solid #3853DE;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1300px;
+    width: 100%;
+    gap: 74px;
+    margin: 10px 0 40px;
+}
+
+.main-content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    max-width: 696px;
+    width: 100%;
+}
+
+.main-content-title {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 82px;
+    letter-spacing: 0;
+}
+
+.main-content-description {
+    font-family: 'Manrope';
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.main-content-photo {
+    max-width: 543px;
+    width: 100%;
+}
+
+.main-content-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 20px;
+        gap: 30px;
+    }
+
+    .main-content-text {
+        gap: 30px
+    }
+
+    .main-content-title {
+        font-size: 51px;
+        line-height: 61px;
+    }
+
+    .main-content-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .main-content-photo {
+        max-width: 443px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        gap: 16px;
+        margin: 0;
+    }
+
+    .main-content-text {
+        gap: 24px
+    }
+
+    .main-content-title {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+
+    .main-content-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .main-content-photo {
+        max-width: 373px;
+    }
+}

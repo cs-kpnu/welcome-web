@@ -1,0 +1,58 @@
+/* Make Your Contribution Section Styles */
+.myc-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    width: 100%;
+    position: relative;
+}
+
+.bg-blob {
+    position: absolute;
+    width: 694px;
+    height: 615px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: rgba(56, 83, 222, 0.3);
+    filter: blur(100px);
+    z-index: -1;
+}
+
+.myc-content-description {
+    top: 15px;
+    position: absolute;
+    right: 0;
+    width: 326px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.myc-content ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 1097px;
+    width: 100%;
+    gap: 80px;
+    list-style: none;
+    padding: 0;
+}
+
+.myc-content ul li {
+    width: fit-content;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 80px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.more-details-button.myc-section {
+    position: absolute;
+    bottom: 23px;
+}
