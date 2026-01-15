@@ -5,39 +5,45 @@
 }
 
 /*Заголовок*/
-.header h2{
+.title h1{
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 40px;
+  margin: 40px 0;
 }
-/*Кнопки для фільтрування та переходу між стрінками*/
-.group-21{
-  display: flex;
-  justify-content: left;
-  margin-left: 5%;
-  
-}
-.pagination{
+/*Кнопки для фільтрування*/
+.group{
   display: flex;
   justify-content: center;
-}
-.button-group-21, .pagination-previous, .pagination-next {
-  background-color: #2b2b2b;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
   align-items: center;
-  gap: 8px;
-  transition: background 0.2s ease;
+  margin-bottom: 40px;
 }
+.group-22{
+  position: relative;
+  width: 1065px;
+  height: 62px;
+  opacity: 1;
+  border-radius: 16px;
+  border-width: 1px;
+  background: #262626;
+  border: 1px solid #FFFFFF66;
+  box-shadow: 0px 1px 2px 0px #FFFFFF29;
+}
+.group-21{
+  position: relative;
+  align-items: center;
+  width: 200px;
+  height: 62px;
+  border-radius: 16px;
+  opacity: 1;
+  margin-left: 1%;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: #2b2b2b;
 
-.group-21:hover {
-  background-color: #3a3a3a;
 }
 
 /*Рядки з картками*/
@@ -45,35 +51,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 /*картки*/
 .container{
   margin: 8px 16px;
-  border: 1px solid rgba(225, 225, 225, 0.5);
   border-radius: 28px;
-  width: 450px;
-  height: 750px;
+  width: 407px;
+  height: 610px;
+  border: 1px solid #FFFFFF
 }
 .container-img{
   background-color: white;
-  width: 450px;
-  height: 450px;
-  border-radius: 28px;
+  width: 407px;
+  height: 320px;
+  border-radius: 26px 26px 0 0;
   display: flex;
   position: relative;
   display: flex;      
   align-items: center; 
   justify-content: center;
+  overflow: hidden;
 }
 .container-left{
+
   position: absolute;
   top: 15px;    
   left: 15px;   
   background-color: #3853DE;
   color: white;
-  padding: 10px 15px;
-  margin: 0;
-  border-radius: 15px;
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-size: 16px;
 }
 .conteiner-right{
   position: absolute;
@@ -81,44 +90,55 @@
   right: 15px;  
   background-color: #57BA69;
   color: white;
-  padding: 10px 15px;
-  margin: 0;
-  border-radius: 15px;
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-size: 16px;
 }
 
 .img{
-  width: 100%;
-  height: auto;
+  width: 407px;
+  height: 400px;
+  top: 18px;
+  position: relative;
+  border-radius: 20px 20px 0 0;
 }
 .container-text{
-  width: 450px;
-  height: 200px;
+  width: 403px;
+  height: 287px;
+  display: block;
 }
-.container-text p{
-  padding: 5px 10px;
+.frame-148{
+  top: 16px;
+  left: 16px;
+  gap: 16px;
+  position: relative;
 }
-
 .frame-170-1{
   font-size: 26px;
 }
-.paragraph{
+.paragraph {
   color: #3853DE;
+  margin: 10px 0 10px;
 }
 
 .data-start{
   display: flex;
+  margin-bottom: 10px;
 }
 .data-start .text-left{
+  padding-left: 3%;
   color: grey;
 }
 
 .data-start .text-right{
   padding-left: 40%;
 }
+.data-start img{
+  width: 15px;
+}
 
 .project{
   display: flex;
-  
 }
 .project p{
   background-color: white;
@@ -133,7 +153,7 @@
   align-items: center;
   background-color: #3853DE;
   padding: 10px 15px;
-  margin: 10px 22.5px;
+  margin: 10px 10px;
   border-radius: 20px;
   width: 90%;
 
@@ -141,4 +161,22 @@
 .next p{
   background-color: #3853DE;
   font-size: 20px;
+}
+/*кнопки переходу між сторінками */
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+.pagination-previous, .pagination-next {
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
 }

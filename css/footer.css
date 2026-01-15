@@ -93,19 +93,19 @@ footer {
 }
 
 .social-media a.instagram {
-    background-image: url('../images/instagram-hover.png');
+    background-image: url('../assets/social-media-icons/instagram-hover.png');
 }
 
 .social-media a.tiktok {
-    background-image: url('../images/tiktok-hover.png');
+    background-image: url('../assets/social-media-icons/tiktok-hover.png');
 }
 
 .social-media a.facebook {
-    background-image: url('../images/facebook-hover.png');
+    background-image: url('../assets/social-media-icons/facebook-hover.png');
 }
 
 .social-media a.linkedin {
-    background-image: url('../images/linkedin-hover.png');
+    background-image: url('../assets/social-media-icons/linkedin-hover.png');
 }
 
 .footer-useful-links {
@@ -170,15 +170,15 @@ footer {
 }
 
 .contact-item-icon.map {
-    background-image: url('../images/map-hover.png');
+    background-image: url('../assets/contact-icons/map-hover.png');
 }
 
 .contact-item-icon.mail {
-    background-image: url('../images/mail-hover.png');
+    background-image: url('../assets/contact-icons/mail-hover.png');
 }
 
 .contact-item-icon.phone {
-    background-image: url('../images/phone-hover.png');
+    background-image: url('../assets/contact-icons/phone-hover.png');
 }
 
 .contact-item-text {

@@ -4,6 +4,19 @@ body {
     gap: 120px;
 }
 
+@media (max-width: 900px) {
+    body {
+        gap: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        gap: 60px;
+    }
+}
+
+
 /* Section Styles */
 section {
     display: flex;
@@ -153,9 +166,9 @@ section {
 
 @media (max-width: 900px) {
     .more-details-button {
-        width: 210px;
-        height: 57px;
-        border-radius: 28px;
+        width: 200px;
+        height: 50px;
+        border-radius: 25px;
     }
 
     .more-details-text {
@@ -167,6 +180,11 @@ section {
         width: 26px;
         height: 26px;
         border-radius: 13px;
+    }
+
+    .more-details-icon img {
+        width: 9px;
+        height: 9px;
     }
 }
 
@@ -187,5 +205,10 @@ section {
         width: 22px;
         height: 22px;
         border-radius: 11px;
+    }
+
+    .more-details-icon img {
+        width: 8px;
+        height: 8px;
     }
 }
