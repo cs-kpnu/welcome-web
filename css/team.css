@@ -56,16 +56,16 @@
 /*картки*/
 .container{
   margin: 8px 16px;
-  border: 1px solid rgba(225, 225, 225, 0.5);
   border-radius: 28px;
   width: 407px;
   height: 610px;
+  border: 1px solid #FFFFFF
 }
 .container-img{
   background-color: white;
-  width: 405px;
+  width: 407px;
   height: 320px;
-  border-radius: 28px 28px 0 0;
+  border-radius: 26px 26px 0 0;
   display: flex;
   position: relative;
   display: flex;      
@@ -74,14 +74,15 @@
   overflow: hidden;
 }
 .container-left{
+
   position: absolute;
   top: 15px;    
   left: 15px;   
   background-color: #3853DE;
   color: white;
-  padding: 10px 15px;
-  margin: 0;
-  border-radius: 15px;
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-size: 16px;
 }
 .conteiner-right{
   position: absolute;
@@ -89,16 +90,16 @@
   right: 15px;  
   background-color: #57BA69;
   color: white;
-  padding: 10px 15px;
-  margin: 0;
-  border-radius: 15px;
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-size: 16px;
 }
 
 .img{
-  width: 418px;
-  height: 358px;
+  width: 407px;
+  height: 400px;
+  top: 18px;
   position: relative;
-  top: 24px;
   border-radius: 20px 20px 0 0;
 }
 .container-text{
