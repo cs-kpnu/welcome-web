@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   color: white;
+  font-family: Arial;
 }
 
 /*Заголовок*/
@@ -11,6 +12,7 @@
   justify-content: center;
   font-size: 40px;
   margin: 40px 0;
+  font-family: Roboto;
 }
 /*Кнопки для фільтрування*/
 .group{
@@ -29,6 +31,7 @@
   background: #262626;
   border: 1px solid #FFFFFF66;
   box-shadow: 0px 1px 2px 0px #FFFFFF29;
+  font-size: 20px;
 }
 .group-21{
   position: relative;
@@ -43,7 +46,7 @@
   font-size: 20px;
   line-height: 30px;
   background-color: #2b2b2b;
-
+  border: 1px solid #000000;
 }
 
 /*Рядки з картками*/
@@ -58,7 +61,7 @@
   margin: 8px 16px;
   border-radius: 28px;
   width: 407px;
-  height: 610px;
+  height: 630px;
   border: 1px solid #FFFFFF
 }
 .container-img{
@@ -74,7 +77,7 @@
   overflow: hidden;
 }
 .container-left{
-
+  text-transform:uppercase;
   position: absolute;
   top: 15px;    
   left: 15px;   
@@ -85,6 +88,7 @@
   font-size: 16px;
 }
 .conteiner-right{
+  text-transform:uppercase;
   position: absolute;
   top: 15px;    
   right: 15px;  
@@ -103,7 +107,7 @@
   border-radius: 20px 20px 0 0;
 }
 .container-text{
-  width: 403px;
+  width: 407px;
   height: 287px;
   display: block;
 }
@@ -112,13 +116,17 @@
   left: 16px;
   gap: 16px;
   position: relative;
+  width: 390px;
 }
 .frame-170-1{
+  margin-bottom: 5px;
   font-size: 26px;
 }
 .paragraph {
   color: #3853DE;
   margin: 10px 0 10px;
+  font-size: 13px;
+  font-family: Arial;
 }
 
 .data-start{
@@ -131,12 +139,15 @@
 }
 
 .data-start .text-right{
-  padding-left: 40%;
+  padding-left: 30%;
 }
 .data-start img{
   width: 15px;
 }
-
+.project-label{
+  text-transform:uppercase;
+  margin-bottom: 3px;
+}
 .project{
   display: flex;
 }
@@ -145,21 +156,21 @@
   color: black;
   padding: 7px 12px;
   margin: 10px 5px;
-  border-radius: 10px;
+  border-radius: 24px;
 }
 .next{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3853DE;
   padding: 10px 15px;
   margin: 10px 10px;
-  border-radius: 20px;
+  border-radius: 24px;
   width: 90%;
-
+  background: linear-gradient(180deg, #3853DE 0%, #5B6FE8 100%);
+  border: 1px solid #000000;
+  text-transform:uppercase;
 }
 .next p{
-  background-color: #3853DE;
   font-size: 20px;
 }
 /*кнопки переходу між сторінками */
@@ -179,4 +190,5 @@
   align-items: center;
   gap: 8px;
   transition: background 0.2s ease;
+  border: 1px solid #000000;
 }
