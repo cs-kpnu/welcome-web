@@ -1,35 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YouthForce — Проєкти</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші Проєкти</title>
+    <link rel="stylesheet" href="../css/projects.css">
 </head>
 <body>
+    <section class="frame179">
+        <div class="group22">
+                <h1 class="page-title">Наші Проєкти</h1>
+        </div>
+        <div class="filters-wrapper">
+                <select id="project-filter" class="custom-select" onchange="setFilter(this.value)">
+                    <option value="" disabled selected hidden>Фільтр</option>
+                    <option value="Active">Активний</option>
+                    <option value="Completed">Завершений</option>
+                </select>
+            </div>
+        <div class="frame221">
+            <div id="projects-container" class="projects-grid"></div>
+        </div>
+        <div id="pagination-container" class="pagination"></div>
+    </section>
 
-  <div id="header"></div>
-
-  <section class="frame-179">
-
-  </section>
-
-  <div id="footer"></div>
-  <script>
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-      });
-  </script>
-  <script>
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
-  </script>
-  <!--<script src="js/layout.js"></script>
-  <script src="js/main.js"></script>-->
+    <script src="../js/projects.js"></script>
 </body>
 </html>
