@@ -67,7 +67,7 @@
   border: 1px solid #FFFFFF
 }
 .container-img{
-  background-color: white;
+  background-color: #E5E5E5;
   width: 407px;
   height: 320px;
   border-radius: 26px 26px 0 0;
@@ -95,6 +95,7 @@
   top: 15px;    
   right: 15px;  
   background-color: #57BA69;
+  border: 1.6px solid #FFFFFFCC;
   color: white;
   padding: 8px 16px;
   border-radius: 40px;
