@@ -9,11 +9,32 @@
   <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
-
   <div id="header"></div> 
     <h1 class="title1">Лишаємось на зв'язку</h1>
+    <div class="after-title-text">Ми завжди відкриті до нових ідей, співпраці та запитань.<br> 
+Оберіть напрямок вашого звернення у формі нижче, щоб ми могли якнайшвидше<br> надати вам актуальну інформацію або розглянути вашу пропозицію.<br> 
+Ваші кроки до цифрових змін починаються тут!</div>
     <section class="contacts-form">
-      <div class="filter"></div>
+      <label class="label">ТИП ЗВЕРНЕННЯ</label>
+      <div class="filter-box">
+        <div class="filter-option">
+          <div class="filter-selected">
+        
+          </div>
+          <div class="option">
+            <input type="radio" class="radio" id="order" name="type">
+            <label for="order">Запит на послуги</label>
+          </div>
+          <div class="option">
+            <input type="radio" class="radio" id="join" name="type">
+            <label for="join">Приєднуйтесь до команди</label>
+          </div>
+          <div class="option">
+            <input type="radio" class="radio" id="other" name="type">
+            <label for="other">Інший запит</label>
+          </div>
+        </div>
+      </div>
       <form class="form" >
         <label for="name">Ім'я</label>
         <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
@@ -24,9 +45,12 @@
         <label for="phone-num">Мобільний телефон</label>
         <input type="tel" id="phone-num" name="phone-num" placeholder="+38 XX XXX XX XX" required>
 
-        <label for="message">Повідомлення</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        
+        <label for="message">Зміст послуги на яку створюється запит</label>
+        <textarea id="message" name="message" required></textarea>
+        <div class="checkbox-container">
+          <input type="checkbox" id="checkbox" name="checkbox" required>
+          <label for="checkbox">Надаю згоду на обробку персональних даних</label>
+        </div>
         <button type="submit">Надіслати</button>
       </form>
     </section>
@@ -34,24 +58,30 @@
       <h2 class="title2">Контакти</h2>
       <div class="contact-container"> 
         <div class="contact-item">
-          <img src="../images/phone-icon.png" alt="Phone">
-          <div class="contact-item-text">+38 (044) 123 45 67</div>
+          <img src="../images/map-icon-blue.svg" alt="Location">
+          <div class="contact-item-half">
+            <div class="contact-label">АДРЕСА</div>
+            <div class="contact-item-text">32301, Україна, Хмельницька область, м. Кам’янець-Подільський, вул. Симона Петлюри, 1, пов. 4, каб. 44</div>
+          </div>
         </div>
         <div class="contact-item">
-          <img src="../images/mail-icon.png" alt="Email">
-          <div class="contact-item-text">digital.department@kpnu.edu.ua</div>
+          <img src="../images/email-icon-blue.svg" alt="Email">
+          <div class="contact-item-half">
+            <div class="contact-label">ЕЛЕКТРОННА ПОШТА</div>
+            <div class="contact-item-text">digital.department@kpnu.edu.ua</div>
+          </div>
         </div>
         <div class="contact-item">
-          <img src="../images/map-icon.png" alt="Location">
-          <div class="contact-item-text">32301, Україна, Хмельницька область, м. Кам’янець-Подільський, вул. Симона Петлюри, 1, пов. 4, каб. 44</div>
+          <img src="../images/phone-icon-blue.svg" alt="Phone">
+          <div class="contact-item-half">
+            <div class="contact-label">НОМЕР ТЕЛЕФОНУ</div>
+            <div class="contact-item-text">+38 (044) 123 45 67</div>
+          </div>
         </div>
-        
       </div>
     </section>
-  
   <div id="footer"></div>
 
   <script src="../js/layout.js"></script>
-  
 </body>
 </html>

@@ -1,6 +1,6 @@
 :root {
     --bg-top: #070708;
-  --bg-bottom: #0f1113;
+    --bg-bottom: #0f1113;
     --panel: rgba(255, 255, 255, 0.05);
     --text: #FFFFFF;
 }
@@ -23,6 +23,7 @@ body {
     line-height: 30px;
     text-align: center;
     margin-bottom: 24px;
+    margin-top: 50px;
 }
 
 .title2 {
@@ -34,7 +35,18 @@ body {
     text-align: center;
     margin-bottom: 24px;
 }
-
+.after-title-text {
+    min-width: 952px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    color: var(--text);
+    font-style: semibold;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
 .contacts-form {
     margin: 0 auto 24px;
     display: flex;
@@ -42,38 +54,85 @@ body {
     gap: 16px;
 }
 
-.filter{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    background: var(--panel);
-    border: 1.6px solid white;
-    border-radius: 14px;
-}
 
-.form {
-    width: 800px;
-    height: 795px;
-    background: var(--panel);
-    border: 1.6px solid white;
-    border-radius: 28px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.form label {
+.label {
     font-size: 14px;
     font: Arrial, sans-serif;
     font-weight: 400;
-    margin-bottom: 8px;
+    line-height: 21px;
+}
+.filter-box {
+    width: 800.4px;
+    height: 240px;
+}
+.filter-option{
+    width: 800.4px;
+    height: 138px;
+    background-color: #FFFFFF1A;
+    border: 1.6px solid white;
+    border-radius: 14px;
+    padding: 1.6px;
+}
+.filter-selected {
+    width: 800.4px;
+    height: 50px;
+    background: var(--panel);
+    background-color: #0f1113;
+    border: 1.6px solid white;
+    border-radius: 14px;
+    color: var(--text);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    margin-bottom: 14px;
 }
 
-.form input,
-.form textarea {
+.filter-box .option  {
+    padding: 1.6px;
+}
+.filter-option .option .radio{
+    display: none;
+}
+.form {
     width: 730px;
-    height: 50px;
+    height: 755px;
+    background: var(--panel);
+    border: 1.6px solid white;
+    border-radius: 28px;
+    padding: 33.6px 33.6px 1.6px 33.6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.form label {
+    height: 21px;
+    font-size: 14px;
+    font: Arrial, sans-serif;
+    font-weight: 400;
+    top: -1.2px;
+    
+}
+
+.form input {
+    width: 733px;
+    padding: 12px 16px;
+    border: 1.6px solid white;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    align-self: center;
+    box-sizing: border-box;
+    min-height: 50px;
+    margin-bottom: 14px;
+}
+
+.form textarea {
+    width: 733px;
     padding: 12px 16px;
     border: 1.6px solid white;
     border-radius: 14px;
@@ -82,15 +141,42 @@ body {
     font-size: 14px;
     font-family: 'Inter', sans-serif;
     align-self: center;
+    box-sizing: border-box;
+    resize: none;
+    min-height: 150px;
 }
+
 
 .form input::placeholder,
 .form textarea::placeholder {
     font-size: 16px;
 }
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 10px;
+    min-height: 24px;
+}
+.checkbox-container label{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+    position: static;
+    padding-bottom: 5px;
+}
+#checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #4b6cff; 
+    color-scheme: dark; 
+}
+
 form button {
-    width: 730px;
+    width: 733px;
     height: 56px;
     background-color: var(--panel);
     color: white;
@@ -100,23 +186,63 @@ form button {
     border-radius: 14px;
     cursor: pointer;
     align-self: center;
+    margin-bottom: 20px;
+    min-height: 56px;
 }
 .contact-container {
     width: 800px;
-    height: 325px;
+    height: 306px;
     background: var(--panel);
     border: 1.6px solid white;
     border-radius: 28px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    padding: 33.6px 33.6px 1.6px 33.6px;
+    padding: 36px;
     gap: 10px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 .contact-item {
     display: flex;
+    max-height: 56px;
+    max-width: 728px;
+    gap: 16px;
+}
+
+.contact-item-half{
+    display: flex;
     flex-direction: column;
-    gap: 5px;
+}
+.contact-item-text {
+    min-width: 444px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    font: Arrial, sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+    font-style: regular;
+    word-wrap: none;
+    letter-spacing: 0.6px;
+}
+.contact-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+.contact-label {
+    display: flex;
+    font-size: 12px;
+    font: Arrial, sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 0.6px;
 }
 
 
