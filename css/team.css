@@ -48,7 +48,9 @@
   background-color: #2b2b2b;
   border: 1px solid #FFFFFF66;
 }
-
+.group-21 img{
+  margin-left: 64px;
+}
 /*Рядки з картками*/
 .frame-145, .frame-207, .frame-209{
   display: flex;
@@ -101,8 +103,8 @@
 
 .img{
   width: 407px;
-  height: 400px;
-  top: 18px;
+  height: 340px;
+  top: 10px;
   position: relative;
   border-radius: 20px 20px 0 0;
 }
@@ -178,9 +180,10 @@
 .pagination{
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .pagination-previous, .pagination-next {
-  background-color: #2b2b2b;
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 12px;
@@ -192,4 +195,26 @@
   gap: 8px;
   transition: background 0.2s ease;
   border: 1px solid #000000;
+}
+
+.pagination-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-list div{
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-list div button{
+  background-color: #000000;
+  border: none;
+  font-size: 20px;
+}
+.pagination-list div:hover, .pagination-list div:hover button{
+  background-color: #3853DE;
 }
