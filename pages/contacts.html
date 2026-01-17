@@ -1,75 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YouthForce — Контакти</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти</title>
+  <link rel="stylesheet" href="../css/contacts.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
-
-  <div id="header"></div>
-
-  <main class="section">
-    <div class="container">
-      <h1 class="section-title">Контакти</h1>
-
-      <div class="contact-grid">
-        <form id="contactForm" class="contact-form card" novalidate>
-          <label>Ім'я
-            <input name="name" type="text" placeholder="Ваше ім'я" required>
-          </label>
-
-          <label>Email
-            <input name="email" type="email" placeholder="email@domain.com" required>
-          </label>
-
-          <label>Тема
-            <select name="topic">
-              <option value="question">Питання</option>
-              <option value="collab">Співпраця</option>
-              <option value="volunteer">Волонтерство</option>
-            </select>
-          </label>
-
-          <label>Повідомлення
-            <textarea name="message" rows="6" placeholder="Ваше повідомлення" required></textarea>
-          </label>
-
-          <div class="form-actions">
-            <button class="btn" type="submit">Відправити</button>
-            <button class="btn ghost" type="reset">Скинути</button>
+  <div id="header"></div> 
+    <h1 class="title1">Лишаємось на зв'язку</h1>
+    <div class="after-title-text">Ми завжди відкриті до нових ідей, співпраці та запитань.<br> 
+Оберіть напрямок вашого звернення у формі нижче, щоб ми могли якнайшвидше<br> надати вам актуальну інформацію або розглянути вашу пропозицію.<br> 
+Ваші кроки до цифрових змін починаються тут!</div>
+    <section class="contacts-form">
+      <label class="label">ТИП ЗВЕРНЕННЯ</label>
+      <div class="filter-box">
+        <div class="filter-option">
+          <div class="filter-selected">
+        
           </div>
-
-          <p id="formResult" class="muted" aria-live="polite" style="margin-top:10px"></p>
-        </form>
-
-        <aside class="card">
-          <h3>Контактна інформація</h3>
-          <p class="muted">Адреса: вул. Прикладна, 1, Кам'янець-Подільський</p>
-          <p class="muted">Email: info@youthforce.example</p>
-          <p class="muted">Телефон: +380 00 000 0000</p>
-        </aside>
+          <div class="option">
+            <input type="radio" class="radio" id="order" name="type">
+            <label for="order">Запит на послуги</label>
+          </div>
+          <div class="option">
+            <input type="radio" class="radio" id="join" name="type">
+            <label for="join">Приєднуйтесь до команди</label>
+          </div>
+          <div class="option">
+            <input type="radio" class="radio" id="other" name="type">
+            <label for="other">Інший запит</label>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
+      <form class="form" >
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+        <label for="surname">Прізвище</label>
+        <input type="text" id="surname" name="surname" placeholder="Введіть ваше прізвище" required>
+        <label for="email">Адреса електронної пошти</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+        <label for="phone-num">Мобільний телефон</label>
+        <input type="tel" id="phone-num" name="phone-num" placeholder="+38 XX XXX XX XX" required>
 
-  <footer></footer>
-  <script>
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-      });
-  </script>
-  <script>
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
-  </script>
-  <!--<script src="js/layout.js"></script>
-  <script src="js/main.js"></script>-->
+        <label for="message">Зміст послуги на яку створюється запит</label>
+        <textarea id="message" name="message" required></textarea>
+        <div class="checkbox-container">
+          <input type="checkbox" id="checkbox" name="checkbox" required>
+          <label for="checkbox">Надаю згоду на обробку персональних даних</label>
+        </div>
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+    <section class="contact-info">
+      <h2 class="title2">Контакти</h2>
+      <div class="contact-container"> 
+        <div class="contact-item">
+          <img src="../images/map-icon-blue.svg" alt="Location">
+          <div class="contact-item-half">
+            <div class="contact-label">АДРЕСА</div>
+            <div class="contact-item-text">32301, Україна, Хмельницька область, м. Кам’янець-Подільський, вул. Симона Петлюри, 1, пов. 4, каб. 44</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="../images/email-icon-blue.svg" alt="Email">
+          <div class="contact-item-half">
+            <div class="contact-label">ЕЛЕКТРОННА ПОШТА</div>
+            <div class="contact-item-text">digital.department@kpnu.edu.ua</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="../images/phone-icon-blue.svg" alt="Phone">
+          <div class="contact-item-half">
+            <div class="contact-label">НОМЕР ТЕЛЕФОНУ</div>
+            <div class="contact-item-text">+38 (044) 123 45 67</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div id="footer"></div>
+
+  <script src="../js/layout.js"></script>
 </body>
 </html>
