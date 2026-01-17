@@ -81,7 +81,7 @@ footer {
     background-repeat: no-repeat;
 }
 
-.social-media img {
+.social-media a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -93,19 +93,19 @@ footer {
 }
 
 .social-media a.instagram {
-    background-image: url('../images/instagram-hover.png');
+    background-image: url('../assets/social-media-icons/instagram-hover.png');
 }
 
 .social-media a.tiktok {
-    background-image: url('../images/tiktok-hover.png');
+    background-image: url('../assets/social-media-icons/tiktok-hover.png');
 }
 
 .social-media a.facebook {
-    background-image: url('../images/facebook-hover.png');
+    background-image: url('../assets/social-media-icons/facebook-hover.png');
 }
 
 .social-media a.linkedin {
-    background-image: url('../images/linkedin-hover.png');
+    background-image: url('../assets/social-media-icons/linkedin-hover.png');
 }
 
 .footer-useful-links {
@@ -128,10 +128,10 @@ footer {
     line-height: 15px;
     color: white;
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .footer-useful-links a:hover {
-    transition: 0.3s ease;
     color: rgba(56, 83, 222, 1);
 }
 
@@ -151,8 +151,6 @@ footer {
     align-items: center;
     gap: 16px;
     text-decoration: none;
-    color: rgba(205, 210, 216, 1);
-    transition: 0.3s ease;
 }
 
 .contact-item-icon {
@@ -162,21 +160,25 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 0.3s ease;
 }
 
 .contact-item-icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s ease;
 }
 
 .contact-item-icon.map {
-    background-image: url('../images/map-hover.png');
+    background-image: url('../assets/contact-icons/map-hover.png');
 }
 
 .contact-item-icon.mail {
-    background-image: url('../images/mail-hover.png');
+    background-image: url('../assets/contact-icons/mail-hover.png');
+}
+
+.contact-item-icon.phone {
+    background-image: url('../assets/contact-icons/phone-hover.png');
 }
 
 .contact-item-text {
@@ -184,9 +186,11 @@ footer {
     font-weight: 300;
     font-size: 13.5px;
     line-height: 15px;
+    color: rgba(205, 210, 216, 1);
+    transition: 0.3s ease;
 }
 
-.contact-item:hover {
+.contact-item:hover .contact-item-text{
     color: rgba(56, 83, 222, 1);
 }
 
