@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .group-22{
   position: relative;
@@ -32,6 +32,11 @@
   border: 1px solid #FFFFFF66;
   box-shadow: 0px 1px 2px 0px #FFFFFF29;
   font-size: 20px;
+  background-image: url('../images/Icon\ dandruff.svg');
+  background-position: 10px center; /* розташування */
+  background-repeat: no-repeat;
+  background-size: 20px; /* розмір іконки */
+  padding-left: 40px; /* відступ тексту */
 }
 .group-21{
   position: relative;
@@ -56,19 +61,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 /*картки*/
 .container{
   margin: 8px 16px;
   border-radius: 28px;
-  width: 407px;
-  height: 600px;
+  width: 405px;
+  height: 610px;
   border: 1px solid #FFFFFF
 }
 .container-img{
   background-color: #E5E5E5;
-  width: 407px;
+  width: 405px;
   height: 320px;
   border-radius: 26px 26px 0 0;
   display: flex;
@@ -103,33 +108,34 @@
 }
 
 .img{
-  width: 407px;
-  height: 340px;
+  width: 418px;
+  height: 358px;
   top: 10px;
   position: relative;
   border-radius: 20px 20px 0 0;
 }
 .container-text{
-  width: 407px;
+  width: 403px;
   height: 287px;
   display: block;
 }
 .frame-148{
   top: 16px;
   left: 16px;
-  gap: 16px;
   position: relative;
-  width: 390px;
+  width: 380px;
 }
 .frame-170-1{
   margin-bottom: 5px;
   font-size: 26px;
 }
+.frame-170-2{
+  font-size: 16px;
+}
 .paragraph {
   color: #3853DE;
   margin: 10px 0 10px;
-  font-size: 13px;
-  font-family: Arial;
+  font-size: 12px;
 }
 
 .data-start{
@@ -139,10 +145,12 @@
 .data-start .text-left{
   padding-left: 3%;
   color: grey;
+  font-size: 12px;
 }
 
 .data-start .text-right{
   padding-left: 30%;
+  font-size: 12px;
 }
 .data-start img{
   width: 15px;
@@ -150,7 +158,7 @@
 .project-label{
   text-transform:uppercase;
   margin-bottom: 3px;
-  font-size: 13px;
+  font-size: 11px;
 }
 .project{
   display: flex;
@@ -161,6 +169,7 @@
   padding: 7px 12px;
   margin: 10px 10px 10px 0;
   border-radius: 24px;
+  font-size: 11px;
 }
 .next{
   display: flex;
@@ -175,7 +184,7 @@
   text-transform:uppercase;
 }
 .next p{
-  font-size: 15px;
+  font-size: 13px;
 }
 /*кнопки переходу між сторінками */
 .pagination{
@@ -214,8 +223,9 @@
 .pagination-list div button{
   background-color: #000000;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 .pagination-list div:hover, .pagination-list div:hover button{
   background-color: #3853DE;
+  cursor: pointer;
 }
