@@ -1,54 +1,49 @@
 :root {
-    --bg-top: #070708;
-    --bg-bottom: #0f1113;
-    --panel: rgba(255, 255, 255, 0.05);
+    --bg-top: #0C0C0C;
+    --bg-bottom: #0C0C0C;
+    --form: #FFFFFF0D;
+    --panel: #FFFFFF1A;
     --text: #FFFFFF;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
     color: var(--text);
-    margin: 0;
-    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .title1 {
-    font: Roboto;
+    font-family: 'Roboto';
     font-size: 40px;
     font-weight: 700;
-    font-style: bold;
     line-height: 30px;
     text-align: center;
     margin-bottom: 24px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .title2 {
-    font: Roboto;
+    font-family: 'Roboto';
     font-size: 40px;
     font-weight: 500;
-    font-style: medium;
     line-height: 30px;
     text-align: center;
+    margin-top: 48px;
     margin-bottom: 24px;
 }
 .after-title-text {
     min-width: 952px;
     font-size: 24px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-weight: 400;
     line-height: 32px;
     text-align: center;
     color: var(--text);
-    font-style: semibold;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     max-width: 800px;
 }
 .contacts-form {
-    margin: 0 auto 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -57,78 +52,111 @@ body {
 
 .label {
     font-size: 14px;
-    font: Arrial, sans-serif;
+    font-family: 'Arial';
     font-weight: 400;
     line-height: 21px;
 }
 .filter-box {
-    width: 800.4px;
-    height: 240px;
+   position: relative; 
+    width: 800px;
+    height: 50px; 
+    z-index: 10; 
+    cursor: pointer;
 }
 .filter-option{
-    width: 800.4px;
+    display: none;
+    position: absolute;
+    top: 16px;
+    width: 800px;
     height: 138px;
-    background-color: #FFFFFF1A;
+    background-color: var(--panel);
     border: 1.6px solid white;
     border-radius: 14px;
     padding: 1.6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    top : 60px;
 }
 .filter-selected {
-    width: 800.4px;
+    width: 800px;
     height: 50px;
-    background: var(--panel);
-    background-color: #0f1113;
+    background: var(--form);
     border: 1.6px solid white;
     border-radius: 14px;
     color: var(--text);
     font-size: 14px;
-    font-family: Arial, sans-serif;
-    padding: 12px 16px;
+    font-family: 'Arial';
+    padding: 0px 16px;
     box-sizing: border-box;
     margin-bottom: 14px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
 }
 
-.filter-box .option  {
-    padding: 1.6px;
+.filter-box.active .filter-option {
+    display: block;
 }
-.filter-option .option .radio{
-    display: none;
+
+.option {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    font-size: 14px;
+    font-family: 'Arial';
+    font-weight: 400;
+    line-height: 21px;
+    box-sizing: border-box;
 }
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.filter-option .option .radio {
+    display: none; 
+}
+
+.option label {
+    margin-left: 24px;
+}
+
 .form {
-    width: 730px;
-    height: 755px;
-    background: var(--panel);
+    width: 800px;
+    height: 793.8px;
+    background: var(--form);
     border: 1.6px solid white;
     border-radius: 28px;
     padding: 33.6px 33.6px 1.6px 33.6px;
-    display: flex;
+    display: inline;
     flex-direction: column;
     gap: 8px;
+    box-sizing: border-box;
 
 }
 
 .form label {
+    display: block;
     height: 21px;
     font-size: 14px;
-    font: Arrial, sans-serif;
+    font-family: 'Arial';
     font-weight: 400;
     top: -1.2px;
-    
+    margin-bottom: 8px;
 }
 
-.form input {
+.form input:not([type="checkbox"]) {
     width: 733px;
     padding: 12px 16px;
     border: 1.6px solid white;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--panel);
     color: #FFFFFF;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Arial';
     align-self: center;
     box-sizing: border-box;
     min-height: 50px;
-    margin-bottom: 14px;
+    margin-bottom: 24px;
 }
 
 .form textarea {
@@ -136,10 +164,10 @@ body {
     padding: 12px 16px;
     border: 1.6px solid white;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--panel);
     color: #FFFFFF;
     font-size: 14px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Arial';
     align-self: center;
     box-sizing: border-box;
     resize: none;
@@ -157,22 +185,26 @@ body {
     align-items: center;
     justify-content: flex-start; 
     gap: 10px;
-    min-height: 24px;
+    height: 24px;
+    width: 732.8px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    box-sizing: border-box;
 }
 .checkbox-container label{
     margin: 0;
     padding: 0;
     line-height: 1;
     cursor: pointer;
-    position: static;
-    padding-bottom: 5px;
+    text-align: center;
 }
 #checkbox {
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     cursor: pointer;
     accent-color: #4b6cff; 
     color-scheme: dark; 
+    margin-bottom: 10px;
 }
 
 form button {
@@ -186,29 +218,34 @@ form button {
     border-radius: 14px;
     cursor: pointer;
     align-self: center;
-    margin-bottom: 20px;
     min-height: 56px;
 }
+
 .contact-container {
     width: 800px;
     height: 306px;
-    background: var(--panel);
+    background: var(--form);
     border: 1.6px solid white;
     border-radius: 28px;
     display: flex;
-    justify-content: center;
+    align-content: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     padding: 36px;
-    gap: 10px;
     box-sizing: border-box;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
+
 }
 
-.contact-item {
-    display: flex;
+.contact-item1 { 
     max-height: 56px;
     max-width: 728px;
-    gap: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    box-sizing: border-box;
+    gap: 24px;
+    margin-bottom: 32px;
 }
 
 .contact-item-half{
@@ -221,27 +258,25 @@ form button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 12px;
-    font: Arrial, sans-serif;
+    font-size: 13.5px;
+    font-family: 'inter';
     font-weight: 400;
-    line-height: 18px;
-    font-style: regular;
-    word-wrap: none;
-    letter-spacing: 0.6px;
+    line-height: 100%;
+    font-style: normal;
+    
 }
 .contact-item img {
     width: 56px;
-    height: 56px;
+    height: 56px;   
     object-fit: contain;
 }
 .contact-label {
     display: flex;
     font-size: 12px;
-    font: Arrial, sans-serif;
+    font-family: 'Arial';
     font-weight: 400;
     line-height: 18px;
-    margin-right: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 4.8px;
     letter-spacing: 0.6px;
 }
 
