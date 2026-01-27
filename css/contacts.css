@@ -57,25 +57,14 @@ body {
     line-height: 21px;
 }
 .filter-box {
-   position: relative; 
+    display: flex;
+    flex-direction: column;
+    position: relative; 
     width: 800px;
-    height: 50px; 
+    height: auto;
+    min-height: 50px; 
     z-index: 10; 
     cursor: pointer;
-}
-.filter-option{
-    display: none;
-    position: absolute;
-    top: 16px;
-    width: 800px;
-    height: 138px;
-    background-color: var(--panel);
-    border: 1.6px solid white;
-    border-radius: 14px;
-    padding: 1.6px;
-    box-sizing: border-box;
-    overflow: hidden;
-    top : 60px;
 }
 .filter-selected {
     width: 800px;
@@ -92,6 +81,23 @@ body {
     display: flex;
     align-items: center; 
     justify-content: space-between; 
+}
+.filter-option{
+    display: none;
+    position: static;
+    width: 800px;
+    height: 138px;
+    background-color: var(--panel);
+    border: 1.6px solid white;
+    border-radius: 14px;
+    padding: 1.6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.filtermark {
+    margin-right: 14px;
 }
 
 .filter-box.active .filter-option {
