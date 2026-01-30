@@ -1,26 +1,32 @@
-*{
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-family: Arial;
+section {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  gap: 60px;
+  position: relative;
 }
 
-/*Заголовок*/
-.title h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Title */
+.title {
+  font-weight: 700;
   font-size: 40px;
-  margin: 40px 0;
-  font-family: Roboto;
+  line-height: 30px;
+  font-family: 'Roboto';
 }
-/*Кнопки для фільтрування*/
-.group{
+
+/* Search and filter */
+.search-filter {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  gap: 15px;
+  width: 100%;
+  max-width: 1300px;
 }
+
 .group-22{
   position: relative;
   width: 1065px;
@@ -38,24 +44,34 @@
   background-size: 20px; 
   padding-left: 40px; 
 }
-.group-21{
-  position: relative;
+
+.search-filter button {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 200px;
   height: 62px;
   border-radius: 16px;
-  opacity: 1;
-  margin-left: 1%;
-  font-family: Roboto;
+  padding: 16px 25px;
+  background: rgba(38, 38, 38, 1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.16));
+}
+
+.filter-text {
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  background-color: #2b2b2b;
-  border: 1px solid #FFFFFF66;
+  color: white;
 }
-.group-21 img{
-  margin-left: 64px;
+
+.search-filter button img{
+  width: 10px;
+  height: 5px;
 }
+
 /*Рядки з картками*/
 .frame-145, .frame-207, .frame-209{
   display: flex;
