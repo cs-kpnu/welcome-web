@@ -1,5 +1,5 @@
 section {
-  margin-top: 66px;
+  margin: 66px 0 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,28 @@ section {
   font-size: 40px;
   line-height: 30px;
   font-family: 'Roboto';
+}
+
+@media (max-width: 900px) {
+  section {
+    margin: 63px 0 60px 0;
+    gap: 45px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    margin: 60px 0 40px 0;
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
 }
 
 /* Search and filter */
@@ -44,7 +66,6 @@ section {
   font-size: 20px;
   font-family: 'Roboto';
   font-weight: 400;
-  line-height: 20px;
 }
 
 .search-filter input::placeholder {
@@ -52,7 +73,6 @@ section {
   font-size: 20px;
   font-family: 'Roboto';
   font-weight: 400;
-  line-height: 20px;
 }
 
 .search-filter input::-webkit-search-cancel-button {
@@ -82,13 +102,70 @@ section {
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
   color: white;
 }
 
 .search-filter button img{
   width: 10px;
   height: 5px;
+}
+
+@media (max-width: 900px) {
+  .search-filter input {
+    height: 51px;
+    font-size: 18px;
+    background-size: 18px;
+  }
+
+  .search-filter input::placeholder {
+    font-size: 18px;
+  }
+
+  .search-filter input::-webkit-search-cancel-button {
+    height: 18px;
+    width: 18px;
+  }
+
+  .search-filter button {
+    width: 171px;
+    height: 55px;
+  }
+
+  .filter-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-filter {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .search-filter input {
+    height: 40px;
+    font-size: 16px;
+    background-size: 16px;
+  }
+
+  .search-filter input::placeholder {
+    font-size: 16px;
+  }
+
+  .search-filter input::-webkit-search-cancel-button {
+    height: 16px;
+    width: 16px;
+  }
+
+  .search-filter button {
+    width: 142px;
+    height: 47px;
+    border: none;
+  }
+
+  .filter-text {
+    font-size: 16px;
+  }
 }
 
 /*Cards*/
@@ -104,7 +181,9 @@ section {
   display: flex;
   flex-direction: column;
   border-radius: 28px;
-  width: 410px;
+  max-width: 412px;
+  width: 100%;
+  min-width: 340px;
   height: 610px;
   border: 1px solid #FFFFFF
 }
@@ -263,36 +342,69 @@ section {
 }
 
 .card-body button {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-gap: 8px;
-height: 42px;
-width: 100%;
-background: linear-gradient(180deg, #3853DE 0%, #5B6FE8 100%);
-border-radius: 60px;
-border: none;
-font-family: 'Arial';
-font-weight: 700;
-font-size: 13px;
-line-height: 20px;
-letter-spacing: 0.65px;
-text-transform: uppercase;
-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  width: 100%;
+  background: linear-gradient(180deg, #3853DE 0%, #5B6FE8 100%);
+  border-radius: 60px;
+  border: none;
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: 0.3s ease;
 }
 
-.card-body button img {
+button .arrow-icon {
   width: 16px;
   height: 16px;
+  background-color: white;
+  -webkit-mask-image: url('../assets/special-icons/arrow_2.png');
+  mask-image: url('../assets/special-icons/arrow_2.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  transition: background-color 0.3s;
 }
 
-/*кнопки переходу між сторінками */
-.pagination{
+.card-body button:hover {
+  background: none;
+  color: #3853DE;
+  border: 1px solid #3853DE;
+}
+
+.card-body button:hover .arrow-icon {
+  background-color: #3853DE;
+}
+
+@media (max-width: 1144px) {
+  .cards-container {
+    max-width: 712px;
+    gap: 50px 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 772px) {
+  .cards-container {
+    max-width: 412px;
+    gap: 36px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Pagination */
+.pagination {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
+
 .pagination-previous, .pagination-next {
   background-color: #000000;
   color: white;
@@ -313,6 +425,7 @@ color: #FFFFFF;
   justify-content: center;
   align-items: center;
 }
+
 .pagination-list div{
   display: flex;
   width: 32px;
@@ -321,11 +434,13 @@ color: #FFFFFF;
   justify-content: center;
   align-items: center;
 }
+
 .pagination-list div button{
   background-color: #000000;
   border: none;
   font-size: 16px;
 }
+
 .pagination-list div:hover, .pagination-list div:hover button{
   background-color: #3853DE;
   cursor: pointer;
