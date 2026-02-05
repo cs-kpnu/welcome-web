@@ -9,3 +9,9 @@ body {
     margin: 0;
     color: #ffffff;
 }
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

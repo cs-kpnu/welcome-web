@@ -1,5 +1,5 @@
 section {
-  margin: 66px 0 80px 0;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@ section {
 
 @media (max-width: 900px) {
   section {
-    margin: 63px 0 60px 0;
+    margin-bottom: 60px;
     gap: 45px;
   }
 
@@ -29,7 +29,7 @@ section {
 
 @media (max-width: 600px) {
   section {
-    margin: 60px 0 40px 0;
+    margin-bottom: 40px;
     gap: 30px;
   }
 
@@ -105,7 +105,7 @@ section {
   color: white;
 }
 
-.search-filter button img{
+.search-filter button img {
   width: 10px;
   height: 5px;
 }
@@ -184,7 +184,7 @@ section {
   max-width: 412px;
   width: 100%;
   min-width: 340px;
-  height: 610px;
+  height: fit-content;
   border: 1px solid #FFFFFF
 }
 
@@ -198,16 +198,16 @@ section {
   overflow: hidden;
 }
 
-.card-image img{
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
 }
 
-.card-header{
+.card-header {
   position: absolute;
-  top: 16px;    
+  top: 16px;
   left: 16px;
   right: 16px;
   display: flex;
@@ -230,7 +230,6 @@ section {
 }
 
 .card-body {
-  height: 253px;
   margin: 16px;
   display: flex;
   flex-direction: column;
@@ -276,7 +275,7 @@ section {
   justify-content: space-between;
 }
 
-.start-date-title{
+.start-date-title {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -284,12 +283,12 @@ section {
   width: 90px;
 }
 
-.start-date img{
+.start-date img {
   width: 14px;
   height: 14px;
 }
 
-.start-date-title-text{
+.start-date-title-text {
   height: 12px;
   font-family: 'Arial';
   font-weight: 400;
@@ -312,7 +311,7 @@ section {
   gap: 8px;
 }
 
-.projects-label{
+.projects-label {
   height: 17px;
   font-family: 'Arial';
   font-weight: 400;
@@ -399,13 +398,46 @@ button .arrow-icon {
   }
 }
 
+@media (max-width: 500px) {
+    .card {
+    min-width: 200px;
+  }
+
+  .card-image {
+    height: 310px;
+  }
+
+  .card-header p {
+    height: 33px;
+    width: 91px;
+    border-radius: 17px;
+  }
+
+  .surname {
+    font-size: 22px;
+  }
+
+  .name {
+    font-size: 12px;
+  }
+
+  .academic-title {
+    font-size: 10px;
+  }
+
+  .project-item {
+    font-size: 9px;
+  }
+}
+
 /* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
 }
 
-.pagination-previous, .pagination-next {
+.pagination-previous,
+.pagination-next {
   background-color: #000000;
   color: white;
   border: none;
@@ -420,13 +452,13 @@ button .arrow-icon {
   border: 1px solid #000000;
 }
 
-.pagination-list{
+.pagination-list {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.pagination-list div{
+.pagination-list div {
   display: flex;
   width: 32px;
   height: 32px;
@@ -435,13 +467,14 @@ button .arrow-icon {
   align-items: center;
 }
 
-.pagination-list div button{
+.pagination-list div button {
   background-color: #000000;
   border: none;
   font-size: 16px;
 }
 
-.pagination-list div:hover, .pagination-list div:hover button{
+.pagination-list div:hover,
+.pagination-list div:hover button {
   background-color: #3853DE;
   cursor: pointer;
 }
