@@ -76,10 +76,16 @@
     }
 }
 
+@media (max-width: 870px) {
+    .main-content {
+        margin-top: 35px;
+    }
+}
+
 @media (max-width: 600px) {
     .main-content {
         gap: 16px;
-        margin: 0;
+        margin-bottom: 0;
     }
 
     .main-content-text {

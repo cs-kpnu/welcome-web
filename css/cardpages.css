@@ -27,6 +27,12 @@ section {
   }
 }
 
+@media (max-width: 870px) {
+  .title {
+    margin-top: 80px;
+  }
+}
+
 @media (max-width: 600px) {
   section {
     margin-bottom: 40px;
@@ -399,7 +405,7 @@ button .arrow-icon {
 }
 
 @media (max-width: 500px) {
-    .card {
+  .card {
     min-width: 200px;
   }
 
