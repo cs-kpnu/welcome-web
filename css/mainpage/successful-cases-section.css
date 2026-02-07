@@ -1,9 +1,8 @@
-/* Successful Cases Section Styles */
 .frame-199 {
-   max-width: 1300px;
-   width: 100%;
-   display: flex;
-   flex-direction: row;
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .frame-159 {
@@ -84,7 +83,7 @@
 }
 
 .successful-case-card {
-    max-width: 393.3px;
+    max-width: 386.7px;
     width: 100%;
     border: 1.6px solid #3853DE;
     box-shadow: 5px 6px 10px rgba(255, 255, 255, 0.25);
@@ -111,7 +110,8 @@
 }
 
 .successful-case-card-title {
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -125,7 +125,6 @@
     max-width: 275px;
     width: 100%;
     min-width: 175px;
-    height: 110px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -159,6 +158,55 @@
     color: white;
 }
 
-.successful-case-card:hover button{
+.successful-case-card:hover button {
     color: white;
+}
+
+@media (max-width: 1150px) {
+    .successful-cases-cards {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 960px) {
+    .successful-cases-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .successful-case-card {
+        max-width: 375px;
+        padding: 30px 25px 19px;
+    }
+
+    .successful-case-card-description {
+        max-width: 325px;
+    }
+}
+
+@media (max-width: 600px) {
+    .successful-case-card {
+        max-width: 300px;
+        padding: 25px 19px 25px;
+    }
+
+    .successful-case-card-image {
+        width: 96px;
+        height: 96px;
+        border: 1px solid #FFFFFF;
+    }
+
+    .successful-case-card-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .successful-case-card-description {
+        margin-top: 16px;
+    }
+
+    .successful-case-card button {
+        margin-top: 25px;
+        line-height: 16px;
+    }
 }
