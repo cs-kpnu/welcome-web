@@ -1,56 +1,53 @@
-/* Results Section Styles */
-.frame-2 {
-    width: 1300px;
-    height: 238px;
-    margin-top: 60px;
+.results {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.result {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 295px;
+    width: 100%;
 }
 
-.frame-134 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 295px;
-}
-
-.frame-134 .text-container{
+.result-body {
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 12px;
     width: 100%;
-    height: 110px;
-    margin: auto -25px;
+    margin: 0 -20px;
 }
 
-.frame-134 .number {
+.result-number {
     width: 100%;
-    height: 70px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: 600;
     font-size: 70px;
-    line-height: 100%;
+    line-height: 70px;
     letter-spacing: 0%;
     background: linear-gradient(90deg, #FFFFFF 0%, #3853DE 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin: 0 auto 10px auto;
 }
 
-.frame-134 .text {
+.result-text {
     width: 100%;
-    height: 24px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: 600;
     font-size: 24px;
-    line-height: 100%;
+    line-height: 24px;
     letter-spacing: 0%;
     background: linear-gradient(90deg, #FFFFFF 0%, #3853DE 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin: 0 auto;
 }
