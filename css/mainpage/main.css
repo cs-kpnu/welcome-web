@@ -64,6 +64,7 @@ section {
 @media (max-width: 900px) {
     section {
         padding: 0 23px;
+        gap: 45px;
     }
 
     .section-title-text {
@@ -84,6 +85,7 @@ section {
 @media (max-width: 600px) {
     section {
         padding: 0 14px;
+        gap: 30px;
     }
 
     .section-title {

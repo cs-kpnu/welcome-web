@@ -43,6 +43,7 @@
     gap: 60px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .myc-content ul li {
@@ -56,7 +57,7 @@
 
 .more-details-button.myc-section {
     position: absolute;
-    bottom: 23px;
+    bottom: 5px;
 }
 
 @media (max-width: 900px) {
@@ -86,7 +87,7 @@
     }
 
     .more-details-button.myc-section {
-        bottom: 15px;
+        bottom: 0;
     }
 }
 
@@ -135,6 +136,5 @@
 
     .more-details-button.myc-section {
         position: relative;
-        bottom: 0;
     }
 }
