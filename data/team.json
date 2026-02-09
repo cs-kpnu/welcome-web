@@ -1,0 +1,633 @@
+{
+    "team": [
+        {
+            "member_id": "1",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "2",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "3",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "4",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "5",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "6",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "7",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "8",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "9",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "10",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "11",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "12",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "13",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "14",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "15",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "16",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "17",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "18",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "19",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "20",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "21",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "22",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "23",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "24",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "25",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "26",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "27",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "28",
+            "surname": "Іванюк",
+            "name": "Віталій Анатолійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/ivaniuk_v_a.png",
+            "academic-title": "Доктор технічних наук, доцент, завідувач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "29",
+            "surname": "Мястковська",
+            "name": "Марина Олександрівна",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/myastkovska_m_o.png",
+            "academic-title": "Кандидат педагогічних наук, старший викладач кафедри комп’ютерних наук",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        },
+
+        {
+            "member_id": "30",
+            "surname": "Філатов",
+            "name": "Антон Сергійович",
+            "position": "Керівник",
+            "status": "Активний",
+            "image": "../data/team-images/filatov_a_s.png",
+            "academic-title": "Кандидат технічних наук, голова правління Громадської організації «Асоціація  управління грантовими проектами»",
+            "date-from": "1 вересня 2024 р.",
+            "projects": [
+                {
+                    "project_id": "1",
+                    "project_name": "YouthForce"
+                },
+                {
+                    "project_id": "2",
+                    "project_name": "YouthPulse"
+                }
+            ]
+        }
+    ]
+}

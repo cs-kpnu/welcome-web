@@ -8,7 +8,6 @@ section {
   position: relative;
 }
 
-/* Title */
 .title {
   font-weight: 700;
   font-size: 40px;
@@ -44,7 +43,6 @@ section {
   }
 }
 
-/* Search and filter */
 .search-filter {
   display: flex;
   flex-direction: row;
@@ -174,7 +172,6 @@ section {
   }
 }
 
-/*Cards*/
 .cards-container {
   display: grid;
   gap: 60px 32px;
@@ -436,51 +433,52 @@ button .arrow-icon {
   }
 }
 
-/* Pagination */
 .pagination {
   display: flex;
-  justify-content: center;
-}
-
-.pagination-previous,
-.pagination-next {
-  background-color: #000000;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 8px;
-  transition: background 0.2s ease;
-  border: 1px solid #000000;
 }
 
-.pagination-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pagination-list div {
+.pagination button, .pagination-list button {
   display: flex;
   width: 32px;
   height: 32px;
   border-radius: 8px;
   justify-content: center;
   align-items: center;
-}
-
-.pagination-list div button {
-  background-color: #000000;
+  background-color: black;
   border: none;
-  font-size: 16px;
+  padding: 0;
 }
 
-.pagination-list div:hover,
-.pagination-list div:hover button {
-  background-color: #3853DE;
+.pagination button img {
+  width: 16px;
+  height: 16px;
+}
+
+.pagination-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-list button {
+  font-size: 16px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+color: #F5F5F5;
+}
+
+.pagination button:hover, .pagination-list button:hover {
+  background-color: rgba(56, 83, 222, 1);
   cursor: pointer;
+}
+
+.pagination-list button.active {
+  background-color: rgba(56, 83, 222, 1);
 }
