@@ -58,6 +58,7 @@
     }
 
     .main-content-text {
+        max-width: 100%;
         gap: 30px
     }
 
@@ -78,7 +79,7 @@
 
 @media (max-width: 870px) {
     .main-content {
-        margin-top: 35px;
+        margin-top: 65px;
     }
 }
 
