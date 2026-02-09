@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакти</title>
   <link rel="stylesheet" href="../css/contacts.css">
   <link rel="stylesheet" href="../css/header.css">
@@ -10,79 +10,81 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div id="header"></div> 
-    <h1 class="title1">Лишаємось на зв'язку</h1>
-    <div class="after-title-text">Ми завжди відкриті до нових ідей, співпраці та запитань.<br> 
-Оберіть напрямок вашого звернення у формі нижче, щоб ми могли якнайшвидше<br> надати вам актуальну інформацію або розглянути вашу пропозицію.<br> 
-Ваші кроки до цифрових змін починаються тут!</div>
-    <section class="contacts-form">
-      <label class="label">ТИП ЗВЕРНЕННЯ</label>
-      <div class="filter-box">
-        <div class="filter-selected">
-          <span class="selected-text">Оберіть тип звернення</span>
-          <img src="../images/filtermark.svg" class="filtermark">
+  <div class="header" id="header"></div>
+  <h1 class="title1">Лишаємось на зв'язку</h1>
+  <div class="after-title-text">Ми завжди відкриті до нових ідей, співпраці та запитань.<br>
+    Оберіть напрямок вашого звернення у формі нижче, щоб ми могли якнайшвидше<br> надати вам актуальну інформацію або
+    розглянути вашу пропозицію.<br>
+    Ваші кроки до цифрових змін починаються тут!</div>
+  <section class="contacts-form">
+    <label class="label">ТИП ЗВЕРНЕННЯ</label>
+    <div class="filter-box">
+      <div class="filter-selected">
+        <span class="selected-text">Оберіть тип звернення</span>
+        <img src="../images/filtermark.svg" class="filtermark">
+      </div>
+      <div class="filter-option">
+        <div class="option">
+          <input type="radio" class="radio" id="order" name="type">
+          <label for="order">Запит на послуги</label>
         </div>
-        <div class="filter-option">
-          <div class="option">
-            <input type="radio" class="radio" id="order" name="type">
-            <label for="order">Запит на послуги</label>
-          </div>
-          <div class="option">
-            <input type="radio" class="radio" id="join" name="type">
-            <label for="join">Приєднуйтесь до команди</label>
-          </div>
-          <div class="option">
-            <input type="radio" class="radio" id="other" name="type">
-            <label for="other">Інший запит</label>
-          </div>
+        <div class="option">
+          <input type="radio" class="radio" id="join" name="type">
+          <label for="join">Приєднуйтесь до команди</label>
+        </div>
+        <div class="option">
+          <input type="radio" class="radio" id="other" name="type">
+          <label for="other">Інший запит</label>
         </div>
       </div>
-      <form class="form" >
-        <label for="name">Ім'я<img src="../images/Text.svg"></label>
-        <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
-        <label for="surname">Прізвище<img src="../images/Text.svg"></label>
-        <input type="text" id="surname" name="surname" placeholder="Введіть ваше прізвище" required>
-        <label for="email">Адреса електронної пошти<img src="../images/Text.svg"></label>
-        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-        <label for="phone-num">Мобільний телефон</label>
-        <input type="tel" id="phone-num" name="phone-num" placeholder="+38 XX XXX XX XX" required>
+    </div>
+    <form class="form">
+      <label for="name">Ім'я<img src="../images/Text.svg"></label>
+      <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+      <label for="surname">Прізвище<img src="../images/Text.svg"></label>
+      <input type="text" id="surname" name="surname" placeholder="Введіть ваше прізвище" required>
+      <label for="email">Адреса електронної пошти<img src="../images/Text.svg"></label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+      <label for="phone-num">Мобільний телефон</label>
+      <input type="tel" id="phone-num" name="phone-num" placeholder="+38 XX XXX XX XX" required>
 
-        <label for="message">Зміст послуги на яку створюється запит<img src="../images/Text.svg"></label>
-        <textarea id="message" name="message" required></textarea>
-        <div class="checkbox-container">
-          <input type="checkbox" id="checkbox" name="checkbox" required>
-          <label for="checkbox">Надаю згоду на обробку персональних даних</label>
-        </div>
-        <button type="submit">Надіслати</button>
-      </form>
-    </section>
-    <section class="contact-info">
-      <h2 class="title2">Контакти</h2>
-      <div class="contact-container"> 
-        <div class="contact-item1">
-          <img src="../images/map-icon-blue.svg" alt="Location">
-          <div class="contact-item-half">
-            <div class="contact-label">АДРЕСА</div>
-            <div class="contact-item-text">32301, Україна, Хмельницька область, м. Кам’янець-Подільський, вул. Симона Петлюри, 1, пов. 4, каб. 44</div>
-          </div>
-        </div>
-        <div class="contact-item1">
-          <img src="../images/email-icon-blue.svg" alt="Email">
-          <div class="contact-item-half">
-            <div class="contact-label">ЕЛЕКТРОННА ПОШТА</div>
-            <div class="contact-item-text">digital.department@kpnu.edu.ua</div>
-          </div>
-        </div>
-        <div class="contact-item1">
-          <img src="../images/phone-icon-blue.svg" alt="Phone">
-          <div class="contact-item-half">
-            <div class="contact-label">НОМЕР ТЕЛЕФОНУ</div>
-            <div class="contact-item-text">+38 (044) 123 45 67</div>
-          </div>
+      <label for="message">Зміст послуги на яку створюється запит<img src="../images/Text.svg"></label>
+      <textarea id="message" name="message" required></textarea>
+      <div class="checkbox-container">
+        <input type="checkbox" id="checkbox" name="checkbox" required>
+        <label for="checkbox">Надаю згоду на обробку персональних даних</label>
+      </div>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+  <section class="contact-info">
+    <h2 class="title2">Контакти</h2>
+    <div class="contact-container">
+      <div class="contact-item1">
+        <img src="../images/map-icon-blue.svg" alt="Location">
+        <div class="contact-item-half">
+          <div class="contact-label">АДРЕСА</div>
+          <div class="contact-item-text">32301, Україна, Хмельницька область, м. Кам’янець-Подільський, вул. Симона
+            Петлюри, 1, пов. 4, каб. 44</div>
         </div>
       </div>
-    </section>
-    <div id="footer"></div>
+      <div class="contact-item1">
+        <img src="../images/email-icon-blue.svg" alt="Email">
+        <div class="contact-item-half">
+          <div class="contact-label">ЕЛЕКТРОННА ПОШТА</div>
+          <div class="contact-item-text">digital.department@kpnu.edu.ua</div>
+        </div>
+      </div>
+      <div class="contact-item1">
+        <img src="../images/phone-icon-blue.svg" alt="Phone">
+        <div class="contact-item-half">
+          <div class="contact-label">НОМЕР ТЕЛЕФОНУ</div>
+          <div class="contact-item-text">+38 (044) 123 45 67</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer"></div>
 
   <script src="../js/layout.js"></script>
   <script src="../js/contacts-filter.js"></script>

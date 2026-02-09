@@ -1,33 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наші Проєкти</title>
-    <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Проєкти</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/cardpages.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/footer.css">
 </head>
+
 <body>
-    <div id="header"></div>
-    <section class="frame179">
-        <div class="group22">
-                <h1 class="page-title">Наші Проєкти</h1>
-        </div>
-        <div class="filters-wrapper">
-                <select id="project-filter" class="custom-select" onchange="setFilter(this.value)">
-                    <option value="" disabled selected hidden>Фільтр</option>
-                    <option value="Active">Активний</option>
-                    <option value="Completed">Завершений</option>
-                </select>
-            </div>
-        <div class="frame221">
-            <div id="projects-container" class="projects-grid"></div>
-        </div>
-        <div id="pagination-container" class="pagination"></div>
-    </section>
-    <div id="footer"></div>
-    <script src="../js/projects.js"></script>
-    <script src="../js/layout.js"></script>
+  <section>
+    <div class="header" id="header"></div>
+    <div class="title">Наші проєкти</div>
+    <div class="search-filter">
+      <input type="search" name="search" id="searchInput" placeholder="Введіть назву проєкту">
+      <button>
+        <div class="filter-text">Фільтри</div>
+        <img src="../assets/special-icons/filter-arrow.png" alt="">
+      </button>
+    </div>
+
+    <div class="cards-container" id="cardsContainer"></div>
+
+    <div class="pagination" id="paginationControls" style="display: none;">
+      <button class="pagination-previous" id="prevBtn">
+        <img src="../assets/special-icons/prev-page-arrow.png" alt="Previous">
+      </button>
+      <div class="pagination-list" id="paginationList"></div>
+      <button class="pagination-next" id="nextBtn">
+        <img src="../assets/special-icons/next-page-arrow.png" alt="Next">
+      </button>
+    </div>
+  </section>
+  <div id="footer"></div>
+  <script src="../js/layout.js"></script>
+  <script src="../js/projects-logic.js"></script>
 </body>
+
 </html>

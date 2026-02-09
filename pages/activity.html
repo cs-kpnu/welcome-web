@@ -1,49 +1,43 @@
 <!doctype html>
 <html lang="uk">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YouthForce — Діяльність</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Діяльність</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/cardpages.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/footer.css">
 </head>
+
 <body>
-
-  <header></header>
-
-  <main class="section">
-    <div class="container">
-      <h1 class="section-title">Діяльність</h1>
-
-      <div class="activity-grid">
-        <article class="card activity">
-          <div class="thumb"></div>
-          <h4>Звіт з події</h4>
-          <p class="muted">Короткий опис, дата</p>
-          <a class="btn small" href="#">Читати</a>
-        </article>
-
-        <article class="card activity">
-          <div class="thumb"></div>
-          <h4>Оголошення</h4>
-          <p class="muted">Короткий опис, дата</p>
-          <a class="btn small" href="#">Читати</a>
-        </article>
-
-        <article class="card activity">
-          <div class="thumb"></div>
-          <h4>Фото-репортаж</h4>
-          <p class="muted">Короткий опис, дата</p>
-          <a class="btn small" href="#">Читати</a>
-        </article>
-      </div>
-
-      <div id="activityPagination" class="pagination" style="margin-top:18px"></div>
+  <section>
+    <div class="header" id="header"></div>
+    <div class="title">Наша діяльність</div>
+    <div class="search-filter">
+      <input type="search" name="search" id="searchInput" placeholder="Введіть назву події">
+      <button>
+        <div class="filter-text">Фільтри</div>
+        <img src="../assets/special-icons/filter-arrow.png" alt="">
+      </button>
     </div>
-  </main>
 
-  <footer></footer>
+    <div class="cards-container" id="cardsContainer"></div>
 
-  <script src="js/layout.js"></script>
-  <script src="js/main.js"></script>
+    <div class="pagination" id="paginationControls" style="display: none;">
+      <button class="pagination-previous" id="prevBtn">
+        <img src="../assets/special-icons/prev-page-arrow.png" alt="Previous">
+      </button>
+      <div class="pagination-list" id="paginationList"></div>
+      <button class="pagination-next" id="nextBtn">
+        <img src="../assets/special-icons/next-page-arrow.png" alt="Next">
+      </button>
+    </div>
+  </section>
+  <div id="footer"></div>
+  <script src="../js/layout.js"></script>
+  <script src="../js/activity-logic.js"></script>
 </body>
+
 </html>

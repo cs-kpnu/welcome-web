@@ -1,4 +1,5 @@
 let teamData = { team: [] };
+let filteredData = { team: [] };
 
 let currentPage = 1;
 let itemsPerPage = 9;
@@ -7,6 +8,7 @@ const paginationList = document.getElementById('paginationList');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const paginationControls = document.getElementById('paginationControls');
+const searchInput = document.getElementById('searchInput');
 
 async function loadData() {
     try {
@@ -18,6 +20,7 @@ async function loadData() {
 
         const data = await response.json();
         teamData = data;
+        filteredData = { team: [...data.team] };
 
         updateItemsPerPage();
     } catch (error) {
@@ -51,14 +54,14 @@ function getBadgeColor(text) {
 function renderCards() {
     cardsContainer.innerHTML = '';
 
-    if (!teamData.team || teamData.team.length === 0) {
+    if (!filteredData.team || filteredData.team.length === 0) {
         cardsContainer.innerHTML = '<p>Список порожній</p>';
         return;
     }
 
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
-    const paginatedItems = teamData.team.slice(start, end);
+    const paginatedItems = filteredData.team.slice(start, end);
 
     paginatedItems.forEach(member => {
         const projectsHtml = member.projects && member.projects.length > 0
@@ -119,9 +122,11 @@ function scrollToTitle() {
 function renderPagination() {
     paginationList.innerHTML = '';
 
-    if (!teamData.team) return;
+    const sourceData = filteredData.team;
 
-    const totalPages = Math.ceil(teamData.team.length / itemsPerPage);
+    if (!sourceData) return;
+
+    const totalPages = Math.ceil(sourceData.length / itemsPerPage);
 
     if (totalPages <= 1) {
         paginationControls.style.display = 'none';
@@ -138,22 +143,62 @@ function renderPagination() {
     nextBtn.style.opacity = currentPage === totalPages ? '0.5' : '1';
     nextBtn.style.pointerEvents = currentPage === totalPages ? 'none' : 'auto';
 
-    for (let i = 1; i <= totalPages; i++) {
-        const btn = document.createElement('button');
-        btn.innerText = i;
+    let pages = [];
 
-        if (i === currentPage) {
-            btn.classList.add('active');
+    if (totalPages <= 5) {
+        for (let i = 1; i <= totalPages; i++) {
+            pages.push(i);
+        }
+    } else {
+        pages.push(1);
+
+        if (currentPage > 3) {
+            pages.push('...');
         }
 
-        btn.addEventListener('click', () => {
-            currentPage = i;
-            render();
-            scrollToTitle();
-        });
+        let start = Math.max(2, currentPage - 1);
+        let end = Math.min(totalPages - 1, currentPage + 1);
+
+        if (currentPage === 1) { end = 3; }
+        if (currentPage === totalPages) { start = totalPages - 2; }
+
+        for (let i = start; i <= end; i++) {
+            pages.push(i);
+        }
+
+        if (currentPage < totalPages - 2) {
+            pages.push('...');
+        }
+
+        pages.push(totalPages);
+    }
+
+    pages.forEach(p => {
+        const btn = document.createElement('button');
+
+        btn.innerText = p;
+
+        if (p === '...') {
+            btn.classList.add('dots');
+            btn.disabled = true;
+            btn.style.cursor = 'default';
+            btn.style.border = 'none';
+            btn.style.background = 'black';
+            btn.style.color = 'white';
+        } else {
+            if (p === currentPage) {
+                btn.classList.add('active');
+            }
+
+            btn.addEventListener('click', () => {
+                currentPage = p;
+                render();
+                scrollToTitle();
+            });
+        }
 
         paginationList.appendChild(btn);
-    }
+    });
 }
 
 function render() {
@@ -179,5 +224,21 @@ nextBtn.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', updateItemsPerPage);
+
+searchInput.addEventListener('input', (e) => {
+    const searchText = e.target.value.toLowerCase().trim();
+
+    if (searchText === "") {
+        filteredData.team = [...teamData.team];
+    } else {
+        filteredData.team = teamData.team.filter(member => {
+            const fullName = `${member.surname} ${member.name}`.toLowerCase();
+
+            return fullName.includes(searchText);
+        });
+    }
+
+    render();
+});
 
 loadData();
