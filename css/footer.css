@@ -88,10 +88,6 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-.social-media a img:hover {
-    opacity: 0;
-}
-
 .social-media a.instagram {
     background-image: url('../assets/social-media-icons/instagram-hover.png');
 }
@@ -190,12 +186,18 @@ footer {
     transition: 0.3s ease;
 }
 
-.contact-item:hover .contact-item-text{
-    color: rgba(56, 83, 222, 1);
-}
+@media (pointer: fine) {
+    .social-media a img:hover {
+        opacity: 0;
+    }
 
-.contact-item:hover img {
-    opacity: 0;
+    .contact-item:hover .contact-item-text {
+        color: rgba(56, 83, 222, 1);
+    }
+
+    .contact-item:hover img {
+        opacity: 0;
+    }
 }
 
 .copyright {
