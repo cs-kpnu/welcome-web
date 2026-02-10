@@ -468,8 +468,7 @@ button .arrow-icon {
   color: #F5F5F5;
 }
 
-@media (hover: hover) {
-
+@media (pointer: fine) {
   .pagination button:hover,
   .pagination-list button:hover {
     background-color: rgba(56, 83, 222, 1);
@@ -482,6 +481,7 @@ button .arrow-icon {
 }
 
 @media (max-width: 600px) {
+
   .pagination,
   .pagination-list {
     gap: 6px;
@@ -506,23 +506,23 @@ button .arrow-icon {
 }
 
 .no-results {
-display: flex;
-justify-content: center;
-align-items: center;
-max-width: 100%;
-background: #262626;
-border: 1px solid rgba(255, 255, 255, 0.4);
-border-radius: 16px;
-padding: 62px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  background: #262626;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 62px 20px;
 }
 
 .no-results-text {
-font-family: 'Roboto';
-font-weight: 400;
-font-size: 24px;
-line-height: 44px;
-text-align: center;
-margin: 0;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 44px;
+  text-align: center;
+  margin: 0;
 }
 
 @media (max-width: 900px) {
