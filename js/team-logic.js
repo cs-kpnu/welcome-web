@@ -53,9 +53,29 @@ function getBadgeColor(text) {
 
 function renderCards() {
     cardsContainer.innerHTML = '';
+    const containerWidth = window.innerWidth;
+
+    cardsContainer.style.maxWidth = '1300px';
+    cardsContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    if (containerWidth < 1144 && containerWidth > 772) {
+        cardsContainer.style.maxWidth = '712px';
+        cardsContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    } else if (containerWidth <= 772) {
+        cardsContainer.style.maxWidth = '412px';
+        cardsContainer.style.gridTemplateColumns = 'repeat(1, 1fr)';
+    }
 
     if (!filteredData.team || filteredData.team.length === 0) {
-        cardsContainer.innerHTML = '<p>Список порожній</p>';
+        cardsContainer.style.maxWidth = '100%';
+        cardsContainer.style.gridTemplateColumns = 'repeat(1, 1fr)';
+        cardsContainer.innerHTML = `
+            <div class="no-results">
+                <div class="no-results-text">
+                        Учасників не знайдено<br>
+                        Спробуйте змінити критерії пошуку
+                </div>
+            </div>
+        `;
         return;
     }
 
@@ -232,7 +252,7 @@ searchInput.addEventListener('input', (e) => {
         filteredData.team = [...teamData.team];
     } else {
         filteredData.team = teamData.team.filter(member => {
-            const fullName = `${member.surname} ${member.name}`.toLowerCase();
+            const fullName = `${member.surname}`.toLowerCase();
 
             return fullName.includes(searchText);
         });
