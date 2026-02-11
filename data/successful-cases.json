@@ -1,0 +1,22 @@
+{
+    "successful_cases": [
+        {
+            "case_id": "2",
+            "image": "../data/successful-cases-images/case1.png",
+            "title": "Digital Learning Hub",
+            "description": "Інтегроване освітнє середовище, орієнтоване на автоматизацію вибору дисциплін, розподіл навчального навантаження та централізацію інформації."
+        },
+        {
+            "case_id": "2",
+            "image": "../data/successful-cases-images/case1.png",
+            "title": "Digital Learning Hub",
+            "description": "Інтегроване освітнє середовище, орієнтоване на автоматизацію вибору дисциплін, розподіл навчального навантаження та централізацію інформації."
+        },
+        {
+            "case_id": "2",
+            "image": "../data/successful-cases-images/case1.png",
+            "title": "Digital Learning Hub",
+            "description": "Інтегроване освітнє середовище, орієнтоване на автоматизацію вибору дисциплін, розподіл навчального навантаження та централізацію інформації."
+        }
+    ]
+}
