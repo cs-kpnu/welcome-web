@@ -4,6 +4,7 @@
     gap: 71px;
     max-width: 1300px;
     width: 100%;
+    align-items: center;
 }
 
 .successful-left {
@@ -47,7 +48,6 @@
     max-width: 737px;
     width: 100%;
     flex-direction: column;
-    padding-top: 35px;
 }
 
 .successful-right-title {
@@ -196,6 +196,10 @@
 }
 
 @media (max-width: 960px) {
+    .successful-content {
+        gap: 20px
+    }
+
     .successful-cases-cards {
         flex-direction: column;
         align-items: center;
@@ -211,15 +215,9 @@
     }
 }
 
-@media (max-width: 960px) {
-        .successful-content {
-    gap: 20px
-    }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .successful-content {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .successful-left {
@@ -227,20 +225,31 @@
     }
 
     .successful-left-logo {
-    max-width: 256px;
+        max-width: 256px;
     }
 
     .successful-left-text-title {
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 400;
-}
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 400;
+    }
 
     .successful-left-text-subtitle {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 400;
-}
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+
+    .successful-right-title {
+        font-size: 20px;
+        line-height: 39px;
+    }
+
+    .successful-right-description {
+        margin: 12px 0;
+        font-size: 16px;
+        line-height: 29px;
+    }
 
     .successful-case-card {
         max-width: 300px;

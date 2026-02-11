@@ -1,8 +1,8 @@
 let teamData = { team: [] };
 let filteredData = { team: [] };
-
 let currentPage = 1;
 let itemsPerPage = 9;
+
 const cardsContainer = document.getElementById('cardsContainer');
 const paginationList = document.getElementById('paginationList');
 const prevBtn = document.getElementById('prevBtn');
@@ -15,7 +15,6 @@ async function loadData() {
         const response = await fetch('../data/team.json');
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
@@ -24,8 +23,14 @@ async function loadData() {
 
         updateItemsPerPage();
     } catch (error) {
-        console.error("Помилка завантаження даних:", error);
-        cardsContainer.innerHTML = '<p style="color:white; text-align:center;">Не вдалося завантажити список учасників.</p>';
+        cardsContainer.innerHTML = `
+            <div class="no-results">
+                <div class="no-results-text">
+                        Учасників не знайдено<br>
+                        Спробуйте змінити критерії пошуку
+                </div>
+            </div>
+        `;
     }
 }
 
@@ -84,9 +89,7 @@ function renderCards() {
     const paginatedItems = filteredData.team.slice(start, end);
 
     paginatedItems.forEach(member => {
-        const projectsHtml = member.projects && member.projects.length > 0
-            ? member.projects.map(p => `<div class="project-item">${p.project_name}</div>`).join('')
-            : '<div class="project-item" style="background:none; padding-left:0;">Проєктів немає</div>';
+        const projectsHtml = member.projects.map(p => `<div class="project-item">${p.project_name}</div>`).join('');
 
         const card = document.createElement('div');
         card.className = 'card';
@@ -114,7 +117,7 @@ function renderCards() {
                 <div class="projects">
                     <div class="projects-label">Проєкти:</div>
                     <div class="projects-list">
-                        ${projectsHtml || '<div class="project-item">Немає проектів</div>'}
+                        ${projectsHtml}
                     </div>
                 </div>
                 <button>Переглянути
