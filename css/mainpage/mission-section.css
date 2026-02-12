@@ -1,4 +1,3 @@
-/* Mission Section Styles */
 .mission-bg-blob {
     position: absolute;
     width: 280px;
@@ -36,7 +35,6 @@
     font-size: 32px;
     line-height: 42px;
     letter-spacing: 0;
-    z-index: 1;
 }
 
 .mission-description-items {
@@ -58,6 +56,7 @@
 
 .mission-image.small-screen {
     display: none;
+    margin: 0 -14px;
 }
 
 .mission-description-items ul {
@@ -67,11 +66,14 @@
     width: 100%;
     gap: 52px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .mission-description-items ul li {
     border-left: 1px solid white;
-    padding-left: 24px;
+    padding: 0 0 0 24px;
+    margin: 0;
     font-family: 'Montserrat';
     font-size: 16px;
     line-height: 30px;
@@ -109,5 +111,44 @@
     .mission-image {
         max-width: 346px;
         height: 288px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 0;
+    }
+
+    .mission-content {
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .mission-image {
+        max-width: 100%;
+    }
+
+    .mission-image.small-screen {
+        display: block;
+    }
+
+    .mission-description {
+        font-size: 16px;
+        line-height: 36px;
+        margin: 0 14px;
+    }
+
+    .mission-image.big-screen {
+        display: none;
+    }
+
+    .mission-description-items ul {
+        gap: 12px;
+        margin: 0 14px;
+    }
+
+    .mission-description-items ul li {
+        padding-left: 20px;
+        font-size: 12px;
     }
 }
