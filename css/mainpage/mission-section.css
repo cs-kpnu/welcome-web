@@ -126,7 +126,7 @@
 }
 
 @media (max-width: 800px) {
-    section {
+    .mission-section {
         padding: 0;
     }
 
